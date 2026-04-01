@@ -1024,12 +1024,23 @@ a { text-decoration: none; color: inherit; }
         <a href="#services" class="btn-outline">Browse Services</a>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="hero-img-placeholder" style="background: linear-gradient(145deg, #F5F2EE 0%, #E8DCC8 30%, #C9A96E 70%, #1A1A1A 100%); border: none; position: relative; overflow: hidden;">
-        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;">
-          <div style="font-family:var(--serif);font-size:2.2rem;font-weight:600;color:rgba(255,255,255,0.9);letter-spacing:2px;text-shadow:0 2px 12px rgba(0,0,0,0.3);">TWC</div>
-          <div style="width:40px;height:1px;background:rgba(255,255,255,0.4);"></div>
-          <div style="font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:0.2em;color:rgba(255,255,255,0.5);">Clinical Wellness</div>
+    <div class="hero-visual" style="display:flex;flex-direction:column;gap:1.25rem;justify-content:center;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <div style="background:var(--white);border:1px solid rgba(184,176,168,0.25);border-radius:16px;padding:1.75rem;text-align:center;">
+          <div style="font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--gold);line-height:1;">HRT</div>
+          <div style="font-size:0.75rem;color:var(--taupe);margin-top:0.5rem;text-transform:uppercase;letter-spacing:0.08em;">Hormone<br>Optimization</div>
+        </div>
+        <div style="background:var(--white);border:1px solid rgba(184,176,168,0.25);border-radius:16px;padding:1.75rem;text-align:center;">
+          <div style="font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--gold);line-height:1;">IV</div>
+          <div style="font-size:0.75rem;color:var(--taupe);margin-top:0.5rem;text-transform:uppercase;letter-spacing:0.08em;">Therapy<br>&amp; Hydration</div>
+        </div>
+        <div style="background:var(--white);border:1px solid rgba(184,176,168,0.25);border-radius:16px;padding:1.75rem;text-align:center;">
+          <div style="font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--gold);line-height:1;">SW</div>
+          <div style="font-size:0.75rem;color:var(--taupe);margin-top:0.5rem;text-transform:uppercase;letter-spacing:0.08em;">SoftWave<br>Regeneration</div>
+        </div>
+        <div style="background:var(--white);border:1px solid rgba(184,176,168,0.25);border-radius:16px;padding:1.75rem;text-align:center;">
+          <div style="font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--gold);line-height:1;">RX</div>
+          <div style="font-size:0.75rem;color:var(--taupe);margin-top:0.5rem;text-transform:uppercase;letter-spacing:0.08em;">Peptides<br>&amp; Protocols</div>
         </div>
       </div>
     </div>
@@ -1200,37 +1211,32 @@ a { text-decoration: none; color: inherit; }
       <div class="section-label">Regenerative Technology</div>
       <div class="softwave-title">SoftWave tissue regeneration. <em>No surgery. No downtime.</em></div>
       <p class="softwave-desc">FDA-cleared shock wave technology that activates your body's own stem cells to heal damaged tissue, reduce chronic pain, and restore mobility — without needles, surgery, or recovery time.</p>
+    </div>
 
-      <div class="softwave-stats">
-        <div>
-          <div class="softwave-stat-num">87%</div>
-          <div class="softwave-stat-label">Pain Reduction</div>
+    <div style="display:flex;flex-direction:column;gap:2rem;justify-content:center;">
+      <div style="text-align:center;">
+        <div style="font-family:var(--serif);font-size:4rem;font-weight:700;color:var(--gold);line-height:1;">87%</div>
+        <div style="font-size:0.85rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.25rem;">Pain Reduction</div>
+      </div>
+      <div style="display:flex;gap:2.5rem;justify-content:center;">
+        <div style="text-align:center;">
+          <div style="font-family:var(--serif);font-size:2rem;font-weight:600;color:rgba(255,255,255,0.9);line-height:1;">3–6</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.25rem;">Sessions Typical</div>
         </div>
-        <div>
-          <div class="softwave-stat-num">3–6</div>
-          <div class="softwave-stat-label">Sessions Typical</div>
-        </div>
-        <div>
-          <div class="softwave-stat-num">0</div>
-          <div class="softwave-stat-label">Days Downtime</div>
+        <div style="text-align:center;">
+          <div style="font-family:var(--serif);font-size:2rem;font-weight:600;color:rgba(255,255,255,0.9);line-height:1;">0</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.25rem;">Days Downtime</div>
         </div>
       </div>
-
-      <div class="softwave-badges">
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;">
         <span class="softwave-badge">FDA-Cleared</span>
         <span class="softwave-badge">Non-Invasive</span>
         <span class="softwave-badge">Stem Cell Activation</span>
       </div>
-
-      <a href="/book.html" class="btn-gold">Book a SoftWave Session</a>
-      <div style="margin-top:1rem;font-size:0.9rem;color:rgba(255,255,255,0.5);">Starting at $300/session &bull; Club members save 20%</div>
-    </div>
-
-    <div class="softwave-video-wrap" style="cursor:default;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;">
-      <div style="font-family:var(--serif);font-size:3rem;font-weight:600;color:var(--gold);line-height:1;text-shadow:0 2px 12px rgba(201,169,110,0.3);">$300</div>
-      <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.12em;">Per Session</div>
-      <div style="width:50px;height:1px;background:rgba(201,169,110,0.3);"></div>
-      <div style="font-size:0.85rem;color:rgba(255,255,255,0.4);text-align:center;line-height:1.6;max-width:200px;">Club members save 20% on every session</div>
+      <div style="text-align:center;">
+        <a href="/book.html" class="btn-gold">Book a SoftWave Session</a>
+        <div style="margin-top:0.75rem;font-size:0.85rem;color:rgba(255,255,255,0.45);">Starting at $300/session &bull; Club members save 20%</div>
+      </div>
     </div>
   </div>
 </section>
@@ -1604,14 +1610,7 @@ a { text-decoration: none; color: inherit; }
 
 <!-- ═══════════════ ABOUT / TEAM ═══════════════ -->
 <section class="section" id="about">
-  <div class="about-grid">
-    <div class="about-img-placeholder" style="background: linear-gradient(145deg, #1A1A1A 0%, #2D2518 40%, #C9A96E 100%); border: none; position: relative; overflow: hidden;">
-      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.2rem;">
-        <div style="font-family:var(--serif);font-size:1.8rem;font-weight:600;color:rgba(255,255,255,0.85);letter-spacing:2px;text-shadow:0 2px 8px rgba(0,0,0,0.4);">Our Team</div>
-        <div style="width:40px;height:1px;background:var(--gold);opacity:0.6;"></div>
-        <div style="font-size:0.7rem;font-weight:500;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.15em;text-align:center;padding:0 2rem;">Jennifer Fedeli &bull; Dawn Philp, FNP<br>Janya Humphrey &bull; Leizyl Anglo, RN</div>
-      </div>
-    </div>
+  <div class="about-grid" style="grid-template-columns:1fr;max-width:800px;">
     <div class="about-text">
       <div class="section-label">Our Team</div>
       <h2>Founded by Jennifer Fedeli. <em>Led by Dawn Philp, FNP.</em></h2>
