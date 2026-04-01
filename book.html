@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Free Consultation — The Wellness Co</title>
+<meta name="description" content="Book your free 15-minute CLARITY™ consultation with The Wellness Co. Name, phone, done. We'll reach out to get you scheduled.">
+<link rel="canonical" href="https://urwellness.co/book">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   RESET & VARIABLES
+============================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+:root {
+  --white: #FFFFFF;
+  --off-white: #FAFAF8;
+  --linen: #F5F2EE;
+  --black: #1A1A1A;
+  --charcoal: #2D2D2D;
+  --gold: #C9A96E;
+  --gold-light: #D4B97E;
+  --gold-dim: rgba(201,169,110,0.08);
+  --marble: #B8B0A8;
+  --marble-light: #E8E4E0;
+  --taupe: #7A6B5A;
+  --text-secondary: #777770;
+  --success: #4A7C59;
+  --success-bg: rgba(74,124,89,0.08);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--white);
+  color: var(--black);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 400; }
+
+.label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--taupe);
+  font-weight: 500;
+}
+
+/* ============================================
+   NAV
+============================================ */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(26,26,26,0.04);
+  padding: 0 40px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: var(--black);
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--black); }
+.nav-links a.active { color: var(--black); }
+
+/* ============================================
+   HERO — BOOKING
+============================================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: var(--linen);
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, var(--linen) 0%, var(--off-white) 40%, var(--linen) 100%),
+    repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 120px,
+      rgba(201,169,110,0.015) 120px,
+      rgba(201,169,110,0.015) 121px
+    );
+}
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  padding: 140px 60px 120px;
+}
+.hero-copy { position: relative; z-index: 2; }
+.hero-copy .label { margin-bottom: 24px; }
+.hero-copy h1 {
+  font-size: clamp(36px, 5vw, 54px);
+  color: var(--black);
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+.hero-copy p {
+  font-size: 17px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 460px;
+}
+
+/* ============================================
+   FORM CARD
+============================================ */
+.form-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 48px 40px;
+  border: 1px solid rgba(26,26,26,0.06);
+  box-shadow:
+    0 1px 3px rgba(0,0,0,0.02),
+    0 8px 32px rgba(0,0,0,0.04),
+    0 24px 60px rgba(0,0,0,0.03);
+  position: relative;
+  z-index: 2;
+}
+.form-card-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--taupe);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.form-card h2 {
+  font-size: 28px;
+  color: var(--black);
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+.form-card .form-subtext {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid rgba(26,26,26,0.1);
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--black);
+  background: var(--off-white);
+  transition: all 0.25s ease;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.form-group input::placeholder {
+  color: var(--marble);
+  font-weight: 400;
+}
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,169,110,0.1);
+  background: var(--white);
+}
+
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237A6B5A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  padding-right: 48px;
+  cursor: pointer;
+}
+
+.btn-submit {
+  width: 100%;
+  background: var(--gold);
+  color: var(--white);
+  padding: 18px 32px;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.btn-submit:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(201,169,110,0.35);
+}
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+/* Shimmer effect on button */
+.btn-submit::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+  animation: btnShimmer 3s ease-in-out infinite;
+}
+@keyframes btnShimmer {
+  0%   { left: -100%; }
+  50%  { left: 100%; }
+  100% { left: 100%; }
+}
+
+.form-fine-print {
+  text-align: center;
+  font-size: 12px;
+  color: var(--marble);
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+/* Success state (hidden by default) */
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+}
+.form-success.visible { display: block; }
+.form-success .check-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--success-bg);
+  border: 2px solid var(--success);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+.form-success .check-circle svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--success);
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.form-success h3 {
+  font-size: 24px;
+  color: var(--black);
+  margin-bottom: 12px;
+}
+.form-success p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   TRUST BAR
+============================================ */
+.trust-bar {
+  background: var(--white);
+  border-bottom: 1px solid rgba(26,26,26,0.04);
+  padding: 28px 40px;
+}
+.trust-bar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.trust-item .trust-icon {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+.trust-item span {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--taupe);
+  font-weight: 500;
+}
+
+/* ============================================
+   WHAT HAPPENS NEXT
+============================================ */
+.next-steps {
+  background: linear-gradient(180deg, var(--white) 0%, var(--off-white) 100%);
+  padding: 100px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.next-steps .container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.next-steps h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  line-height: 1.15;
+  margin-bottom: 16px;
+  letter-spacing: -0.3px;
+}
+.next-steps .section-body {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 520px;
+  margin: 0 auto 56px;
+}
+.gold-line {
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+  margin-bottom: 20px;
+}
+.gold-line.centered { margin: 0 auto 20px; }
+
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Connecting line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold) 20%, var(--gold) 80%, transparent 100%);
+  opacity: 0.3;
+}
+
+.timeline-step {
+  text-align: center;
+  position: relative;
+  padding: 0 24px;
+}
+.timeline-step .step-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid rgba(201,169,110,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+}
+.timeline-step .step-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.timeline-step .step-time {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.timeline-step h3 {
+  font-size: 20px;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+.timeline-step p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ============================================
+   CALENDAR BACKUP
+============================================ */
+.calendar-section {
+  background: linear-gradient(180deg, var(--off-white) 0%, var(--linen) 100%);
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.calendar-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.calendar-divider {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.calendar-divider .line {
+  flex: 1;
+  height: 1px;
+  background: rgba(26,26,26,0.08);
+}
+.calendar-divider .or-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--marble);
+  font-weight: 500;
+}
+
+.calendar-card {
+  background: var(--white);
+  border: 1px solid rgba(26,26,26,0.06);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.03);
+}
+.calendar-card .cal-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--gold-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+.calendar-card .cal-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.calendar-card h3 {
+  font-size: 22px;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+.calendar-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--black);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(26,26,26,0.12);
+  transition: all 0.3s;
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  box-shadow: 0 2px 12px rgba(201,169,110,0.1);
+}
+.calendar-card .cal-note {
+  font-size: 12px;
+  color: var(--marble);
+  margin-top: 16px;
+}
+
+/* Calendar intro (hidden when picker is open) */
+.cal-intro { transition: opacity 0.3s ease; }
+.cal-intro.hidden { display: none; }
+
+/* Calendar picker */
+.cal-picker {
+  display: none;
+  text-align: left;
+}
+.cal-picker.active { display: block; }
+
+.cal-picker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.cal-picker-header .cal-month {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--black);
+}
+.cal-picker-header .cal-nav {
+  display: flex;
+  gap: 8px;
+}
+.cal-picker-header .cal-nav button {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid rgba(26,26,26,0.08);
+  background: var(--off-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  color: var(--black);
+  font-size: 14px;
+}
+.cal-picker-header .cal-nav button:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 24px;
+}
+.cal-grid .day-label {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--marble);
+  letter-spacing: 0.5px;
+  padding: 8px 0;
+}
+.cal-grid .day {
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--black);
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+.cal-grid .day:hover {
+  background: var(--gold-dim);
+}
+.cal-grid .day.empty {
+  cursor: default;
+}
+.cal-grid .day.empty:hover { background: none; }
+.cal-grid .day.past {
+  color: var(--marble-light);
+  cursor: default;
+}
+.cal-grid .day.past:hover { background: none; }
+.cal-grid .day.available::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.cal-grid .day.selected {
+  background: var(--gold);
+  color: var(--white);
+}
+.cal-grid .day.selected::after { display: none; }
+.cal-grid .day.today {
+  border: 1px solid rgba(26,26,26,0.1);
+}
+
+/* Time slots */
+.time-slots {
+  display: none;
+}
+.time-slots.active { display: block; }
+.time-slots-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--black);
+  margin-bottom: 12px;
+}
+.time-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.time-slot {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid rgba(26,26,26,0.08);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--black);
+  cursor: pointer;
+  transition: all 0.2s;
+  background: var(--off-white);
+}
+.time-slot:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.time-slot.selected {
+  background: var(--gold);
+  color: var(--white);
+  border-color: var(--gold);
+}
+
+/* Confirm step */
+.cal-confirm {
+  display: none;
+}
+.cal-confirm.active { display: block; }
+.cal-confirm .confirm-summary {
+  background: var(--off-white);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--black);
+  line-height: 1.7;
+}
+.cal-confirm .confirm-summary strong {
+  font-weight: 600;
+}
+.cal-confirm .confirm-summary .confirm-detail {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.cal-confirm .form-group {
+  margin-bottom: 16px;
+}
+.cal-confirm .form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--black);
+  margin-bottom: 6px;
+}
+.cal-confirm .form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(26,26,26,0.1);
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--black);
+  background: var(--white);
+  outline: none;
+  transition: all 0.25s ease;
+  -webkit-appearance: none;
+}
+.cal-confirm .form-group input::placeholder { color: var(--marble); }
+.cal-confirm .form-group input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,169,110,0.1);
+}
+
+.btn-confirm {
+  width: 100%;
+  background: var(--gold);
+  color: var(--white);
+  padding: 16px;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-confirm:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(201,169,110,0.3);
+}
+
+/* Booked state */
+.cal-booked {
+  display: none;
+  text-align: center;
+  padding: 24px 0;
+}
+.cal-booked.active { display: block; }
+.cal-booked .check-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--success-bg);
+  border: 2px solid var(--success);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+.cal-booked .check-circle svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--success);
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.cal-booked h3 {
+  font-size: 22px;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+.cal-booked p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Back link inside calendar */
+.cal-back {
+  font-size: 13px;
+  color: var(--taupe);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.cal-back:hover { color: var(--gold); }
+
+/* Smooth card expand */
+.calendar-card {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+footer {
+  background: var(--black);
+  color: var(--marble);
+  padding: 60px 40px;
+  text-align: center;
+}
+footer .footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+footer p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+footer .footer-links {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+footer .footer-links a {
+  font-size: 12px;
+  color: var(--marble);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+footer .footer-links a:hover { color: var(--gold); }
+
+/* ============================================
+   GRAIN TEXTURE OVERLAY
+============================================ */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0.022;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+/* ============================================
+   SCROLL REVEAL ANIMATIONS
+============================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes goldLineDraw {
+  from { width: 0; }
+  to   { width: 30px; }
+}
+@keyframes warmPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50%      { opacity: 0.7; transform: scale(1.03); }
+}
+@keyframes heroTextReveal {
+  from { opacity: 0; transform: translateY(30px); filter: blur(4px); }
+  to   { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+@keyframes formCardEntrance {
+  from { opacity: 0; transform: translateY(30px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Reveal base states */
+[data-reveal] {
+  opacity: 0;
+  transition: none;
+}
+[data-reveal].revealed {
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-reveal="fade-up"].revealed {
+  animation-name: fadeUp;
+  animation-duration: 0.9s;
+}
+[data-reveal="fade-in"].revealed {
+  animation-name: fadeIn;
+  animation-duration: 0.8s;
+}
+[data-reveal="scale-in"].revealed {
+  animation-name: scaleIn;
+  animation-duration: 0.8s;
+}
+
+/* Stagger children */
+[data-stagger] > * {
+  opacity: 0;
+}
+[data-stagger].revealed > * {
+  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+[data-stagger].revealed > *:nth-child(1) { animation-delay: 0s; }
+[data-stagger].revealed > *:nth-child(2) { animation-delay: 0.1s; }
+[data-stagger].revealed > *:nth-child(3) { animation-delay: 0.12s; }
+
+/* Hero entrance */
+.hero-copy .label,
+.hero-copy h1,
+.hero-copy p {
+  animation: heroTextReveal 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero-copy .label { animation-delay: 0.2s; }
+.hero-copy h1     { animation-delay: 0.4s; }
+.hero-copy p      { animation-delay: 0.6s; }
+.form-card {
+  animation: formCardEntrance 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+
+/* Gold line draw on reveal */
+[data-reveal].revealed .gold-line {
+  animation: goldLineDraw 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+/* ============================================
+   WARM GRADIENT ORBS
+============================================ */
+.next-steps,
+.calendar-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.next-steps::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -60px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,110,0.05) 0%, rgba(245,242,238,0.3) 50%, transparent 70%);
+  pointer-events: none;
+  animation: warmPulse 10s ease-in-out infinite;
+}
+.next-steps::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -80px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,110,0.03) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.calendar-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(201,169,110,0.12) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -50px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,110,0.08) 0%, rgba(245,242,238,0.4) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+  animation: warmPulse 12s ease-in-out infinite;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to top, var(--white) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.container,
+.trust-bar-inner,
+.timeline,
+.calendar-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   DRAFT BADGE
+============================================ */
+.draft-badge {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--gold);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  z-index: 200;
+  box-shadow: 0 4px 20px rgba(201,169,110,0.4);
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    padding: 100px 24px 60px;
+    gap: 40px;
+  }
+  .form-card { padding: 32px 24px; }
+  .next-steps { padding: 60px 20px; }
+  .timeline {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .timeline::before { display: none; }
+  .calendar-section { padding: 60px 20px; }
+  .calendar-card { padding: 32px 24px; }
+  footer { padding: 40px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- DRAFT BADGE -->
+<div class="draft-badge">DRAFT — Copy Review</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">THE WELLNESS CO.</a>
+  <ul class="nav-links">
+    <li><a href="#">For Her</a></li>
+    <li><a href="#">For Him</a></li>
+    <li><a href="#">CLARITY&trade;</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#" class="active" style="background: var(--gold); color: var(--white); padding: 10px 24px; border-radius: 6px; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO — FORM -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+
+    <!-- LEFT: COPY -->
+    <div class="hero-copy">
+      <div class="label">Free CLARITY&trade; Consultation</div>
+      <h1>One Conversation<br>Changes Everything.</h1>
+      <p>Three fields. That's it. Our team will reach out to schedule your free 15-minute consultation with Dawn.</p>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div class="form-card">
+      <div id="form-fields">
+        <div class="form-card-label">Get Started</div>
+        <h2>Book Your Consultation</h2>
+        <p class="form-subtext">Free &middot; 15 minutes &middot; Virtual or in-person</p>
+
+        <form id="booking-form" autocomplete="on">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="First and last name" autocomplete="name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(619) 555-0123" autocomplete="tel" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <label for="interest">What Brings You In?</label>
+            <select id="interest" name="interest" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="hormones-her">Hormone Optimization (Women)</option>
+              <option value="hormones-him">Testosterone / TRT (Men)</option>
+              <option value="peptides">Peptide Therapy</option>
+              <option value="weight">Weight Management</option>
+              <option value="energy">Energy & Performance</option>
+              <option value="couples">His & Hers (Couples)</option>
+              <option value="not-sure">Not Sure Yet — Just Curious</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit">Send &mdash; We'll Text You</button>
+        </form>
+
+        <p class="form-fine-print">No spam. No pressure. Just a real person reaching out to help.</p>
+      </div>
+
+      <!-- SUCCESS STATE -->
+      <div id="form-success" class="form-success">
+        <div class="check-circle">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h3>You're In.</h3>
+        <p>Our team is on it. Check your phone — we'll reach out shortly to get you scheduled.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <div class="trust-icon"></div>
+      <span>Free 15-Min Consultation</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon"></div>
+      <span>No Contracts Ever</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon"></div>
+      <span>Concierge Booking</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon"></div>
+      <span>San Diego Based</span>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT HAPPENS NEXT -->
+<section class="next-steps">
+  <div class="container">
+    <div class="label" data-reveal="fade-up" style="text-align: center; margin-bottom: 16px;">After You Submit</div>
+    <div class="gold-line centered" data-reveal="fade-up"></div>
+    <h2 data-reveal="fade-up">Three Steps. That's It.</h2>
+    <p class="section-body" data-reveal="fade-up">No phone trees. No intake forms. No waiting weeks. Here's what happens the moment you hit send.</p>
+
+    <div class="timeline" data-stagger>
+      <div class="timeline-step">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="step-time">Shortly After</div>
+        <h3>We Reach Out</h3>
+        <p>Our team contacts you by text to confirm your interest and find a time that works.</p>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div class="step-time">Your Schedule</div>
+        <h3>We Book You</h3>
+        <p>15 minutes with Dawn Philp, NP. Virtual or in-person at our San Diego clinic. We fit your schedule, not ours.</p>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="step-time">Day Of</div>
+        <h3>You Show Up</h3>
+        <p>Dawn reviews your symptoms, goals, and history. You leave with clarity on exactly what's going on — and what to do about it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDAR BACKUP -->
+<section class="calendar-section">
+  <div class="calendar-inner">
+    <div class="calendar-divider" data-reveal="fade-in">
+      <div class="line"></div>
+      <div class="or-text">Or Schedule Directly</div>
+      <div class="line"></div>
+    </div>
+
+    <div class="calendar-card" data-reveal="scale-in">
+      <!-- Intro state -->
+      <div class="cal-intro" id="cal-intro">
+        <div class="cal-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3>Pick a Time</h3>
+        <p>Prefer to skip the text? Book your CLARITY&trade; Consultation directly on our calendar.</p>
+        <button class="btn-outline" id="open-calendar">View Available Times</button>
+        <p class="cal-note">One appointment type &middot; CLARITY&trade; Consultation &middot; 15 min</p>
+      </div>
+
+      <!-- Calendar picker -->
+      <div class="cal-picker" id="cal-picker">
+        <button class="cal-back" id="cal-back-intro">&larr; Back</button>
+        <div class="cal-picker-header">
+          <div class="cal-month" id="cal-month-label">March 2026</div>
+          <div class="cal-nav">
+            <button id="cal-prev">&lsaquo;</button>
+            <button id="cal-next">&rsaquo;</button>
+          </div>
+        </div>
+        <div class="cal-grid" id="cal-grid"></div>
+
+        <!-- Time slots (shown after date pick) -->
+        <div class="time-slots" id="time-slots">
+          <div class="time-slots-label" id="time-slots-label">Available times</div>
+          <div class="time-slots-grid" id="time-slots-grid"></div>
+        </div>
+      </div>
+
+      <!-- Confirm step -->
+      <div class="cal-confirm" id="cal-confirm">
+        <button class="cal-back" id="cal-back-picker">&larr; Change time</button>
+        <div class="confirm-summary" id="confirm-summary"></div>
+        <form id="cal-confirm-form" autocomplete="on">
+          <div class="form-group">
+            <label for="cal-name">Name</label>
+            <input type="text" id="cal-name" placeholder="First and last name" autocomplete="name" required>
+          </div>
+          <div class="form-group">
+            <label for="cal-phone">Phone</label>
+            <input type="tel" id="cal-phone" placeholder="(619) 555-0123" autocomplete="tel" required>
+          </div>
+          <div class="form-group">
+            <label for="cal-email">Email</label>
+            <input type="email" id="cal-email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+          <button type="submit" class="btn-confirm">Confirm Booking</button>
+        </form>
+      </div>
+
+      <!-- Booked state -->
+      <div class="cal-booked" id="cal-booked">
+        <div class="check-circle">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h3>You're Booked.</h3>
+        <p id="booked-detail">We'll send a confirmation to your phone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">THE WELLNESS CO.</div>
+  <p>Modern Medicine. Personalized.</p>
+  <p style="margin-top: 8px;">San Diego, California &middot; (619) 444-3264</p>
+  <div class="footer-links">
+    <a href="#">For Her</a>
+    <a href="#">For Him</a>
+    <a href="#">CLARITY&trade;</a>
+    <a href="#">About</a>
+    <a href="#">Privacy</a>
+  </div>
+  <p style="margin-top: 32px; font-size: 11px; color: var(--marble);">&copy; 2026 The Wellness Co. All rights reserved.</p>
+</footer>
+
+<script>
+(function() {
+  /* Scroll Reveals */
+  const revealEls = document.querySelectorAll('[data-reveal], [data-stagger]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  revealEls.forEach(el => observer.observe(el));
+
+  /* Nav hide/show */
+  const nav = document.querySelector('nav');
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > 200) {
+      if (currentScroll > lastScroll) {
+        nav.style.transform = 'translateY(-100%)';
+        nav.style.transition = 'transform 0.35s ease';
+      } else {
+        nav.style.transform = 'translateY(0)';
+      }
+    } else {
+      nav.style.transform = 'translateY(0)';
+    }
+    lastScroll = currentScroll;
+  }, { passive: true });
+
+  /* Form submission */
+  const form = document.getElementById('booking-form');
+  const formFields = document.getElementById('form-fields');
+  const formSuccess = document.getElementById('form-success');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = form.querySelector('.btn-submit');
+      btn.textContent = 'Sending...';
+      btn.style.opacity = '0.7';
+      btn.disabled = true;
+      setTimeout(() => {
+        formFields.style.display = 'none';
+        formSuccess.classList.add('visible');
+      }, 1200);
+    });
+  }
+
+  /* Phone formatting */
+  const phoneInput = document.getElementById('phone');
+  if (phoneInput) {
+    phoneInput.addEventListener('input', function(e) {
+      let v = e.target.value.replace(/\D/g, '');
+      if (v.length > 10) v = v.slice(0, 10);
+      if (v.length >= 7) e.target.value = '(' + v.slice(0,3) + ') ' + v.slice(3,6) + '-' + v.slice(6);
+      else if (v.length >= 4) e.target.value = '(' + v.slice(0,3) + ') ' + v.slice(3);
+      else if (v.length >= 1) e.target.value = '(' + v;
+    });
+  }
+
+  /* Prevent empty anchors */
+  document.querySelectorAll('a[href="#"]').forEach(a => {
+    a.addEventListener('click', e => e.preventDefault());
+  });
+
+  /* ============================================
+     CALENDAR PICKER
+  ============================================ */
+  const calIntro = document.getElementById('cal-intro');
+  const calPicker = document.getElementById('cal-picker');
+  const calConfirm = document.getElementById('cal-confirm');
+  const calBooked = document.getElementById('cal-booked');
+  const calGrid = document.getElementById('cal-grid');
+  const calMonthLabel = document.getElementById('cal-month-label');
+  const timeSlots = document.getElementById('time-slots');
+  const timeSlotsGrid = document.getElementById('time-slots-grid');
+  const timeSlotsLabel = document.getElementById('time-slots-label');
+  const confirmSummary = document.getElementById('confirm-summary');
+
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const dayLabels = ['Su','Mo','Tu','We','Th','Fr','Sa'];
+
+  let currentMonth = 2; // March (0-indexed)
+  let currentYear = 2026;
+  let selectedDate = null;
+  let selectedTime = null;
+
+  // Fallback times if API is unreachable (dev/preview only)
+  const fallbackTimes = ['9:00 AM','9:30 AM','10:00 AM','10:30 AM','11:00 AM','1:00 PM','1:30 PM','2:00 PM','2:30 PM','3:00 PM','3:30 PM','4:00 PM'];
+
+  // API base — empty string = same origin (Vercel), override for local dev
+  const API_BASE = '';
+
+  function showView(view) {
+    calIntro.classList.add('hidden');
+    calPicker.classList.remove('active');
+    calConfirm.classList.remove('active');
+    calBooked.classList.remove('active');
+
+    if (view === 'intro') { calIntro.classList.remove('hidden'); }
+    else if (view === 'picker') { calPicker.classList.add('active'); }
+    else if (view === 'confirm') { calConfirm.classList.add('active'); }
+    else if (view === 'booked') { calBooked.classList.add('active'); }
+  }
+
+  function renderCalendar() {
+    calMonthLabel.textContent = months[currentMonth] + ' ' + currentYear;
+    calGrid.innerHTML = '';
+
+    // Day labels
+    dayLabels.forEach(d => {
+      const el = document.createElement('div');
+      el.className = 'day-label';
+      el.textContent = d;
+      calGrid.appendChild(el);
+    });
+
+    const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+    const today = new Date();
+
+    // Empty cells before first day
+    for (let i = 0; i < firstDay; i++) {
+      const el = document.createElement('div');
+      el.className = 'day empty';
+      calGrid.appendChild(el);
+    }
+
+    // Days
+    for (let d = 1; d <= daysInMonth; d++) {
+      const el = document.createElement('div');
+      el.className = 'day';
+      el.textContent = d;
+
+      const thisDate = new Date(currentYear, currentMonth, d);
+      const dayOfWeek = thisDate.getDay();
+
+      // Past days
+      if (thisDate < new Date(today.getFullYear(), today.getMonth(), today.getDate())) {
+        el.classList.add('past');
+      }
+      // Weekends
+      else if (dayOfWeek === 0 || dayOfWeek === 6) {
+        el.classList.add('past');
+      }
+      // Available weekdays
+      else {
+        el.classList.add('available');
+        if (thisDate.getFullYear() === today.getFullYear() && thisDate.getMonth() === today.getMonth() && thisDate.getDate() === today.getDate()) {
+          el.classList.add('today');
+        }
+        el.addEventListener('click', () => selectDate(d, el));
+      }
+
+      calGrid.appendChild(el);
+    }
+  }
+
+  async function selectDate(day, el) {
+    // Clear previous selection
+    calGrid.querySelectorAll('.day.selected').forEach(d => d.classList.remove('selected'));
+    el.classList.add('selected');
+
+    selectedDate = new Date(currentYear, currentMonth, day);
+    selectedTime = null;
+
+    // Show time slots
+    const dayStr = selectedDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+    timeSlotsLabel.textContent = dayStr;
+    timeSlotsGrid.innerHTML = '<div style="grid-column:1/-1;text-align:center;color:#7A6B5A;padding:1rem;">Loading availability...</div>';
+    timeSlots.classList.add('active');
+
+    // Build YYYY-MM-DD string for API
+    const dateStr = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+
+    let available = [];
+    try {
+      const res = await fetch(`${API_BASE}/api/availability?date=${dateStr}`);
+      if (res.ok) {
+        const data = await res.json();
+        available = data.slots || [];
+      } else {
+        console.warn('Availability API error, using fallback');
+        available = fallbackTimes;
+      }
+    } catch (err) {
+      console.warn('Availability API unreachable, using fallback:', err);
+      available = fallbackTimes.filter(() => Math.random() > 0.25);
+    }
+
+    timeSlotsGrid.innerHTML = '';
+
+    if (available.length === 0) {
+      timeSlotsGrid.innerHTML = '<div style="grid-column:1/-1;text-align:center;color:#7A6B5A;padding:1rem;">No availability on this date. Please select another day.</div>';
+    } else {
+      available.forEach(time => {
+        const slot = document.createElement('div');
+        slot.className = 'time-slot';
+        slot.textContent = time;
+        slot.addEventListener('click', () => selectTime(time, slot));
+        timeSlotsGrid.appendChild(slot);
+      });
+    }
+
+    timeSlots.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function selectTime(time, el) {
+    timeSlotsGrid.querySelectorAll('.time-slot.selected').forEach(s => s.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedTime = time;
+
+    // Go to confirm
+    setTimeout(() => {
+      const dayStr = selectedDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+      confirmSummary.innerHTML = '<strong>CLARITY\u2122 Consultation</strong><br>' + dayStr + ' at ' + selectedTime + '<div class="confirm-detail">15 minutes \u00b7 with Dawn Philp, NP \u00b7 Virtual or in-person</div>';
+      showView('confirm');
+    }, 300);
+  }
+
+  // Open calendar
+  document.getElementById('open-calendar').addEventListener('click', () => {
+    showView('picker');
+    renderCalendar();
+  });
+
+  // Back buttons
+  document.getElementById('cal-back-intro').addEventListener('click', () => {
+    timeSlots.classList.remove('active');
+    showView('intro');
+  });
+  document.getElementById('cal-back-picker').addEventListener('click', () => {
+    showView('picker');
+  });
+
+  // Month navigation
+  document.getElementById('cal-prev').addEventListener('click', () => {
+    currentMonth--;
+    if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+    timeSlots.classList.remove('active');
+    renderCalendar();
+  });
+  document.getElementById('cal-next').addEventListener('click', () => {
+    currentMonth++;
+    if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+    timeSlots.classList.remove('active');
+    renderCalendar();
+  });
+
+  // Confirm form — creates real GHL appointment
+  const calConfirmForm = document.getElementById('cal-confirm-form');
+  if (calConfirmForm) {
+    calConfirmForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = calConfirmForm.querySelector('.btn-confirm');
+      btn.textContent = 'Booking...';
+      btn.style.opacity = '0.7';
+      btn.disabled = true;
+
+      const name  = document.getElementById('cal-name').value.trim();
+      const phone = document.getElementById('cal-phone').value.trim();
+      const email = document.getElementById('cal-email').value.trim();
+
+      // Build date string YYYY-MM-DD
+      const dateStr = `${selectedDate.getFullYear()}-${String(selectedDate.getMonth() + 1).padStart(2, '0')}-${String(selectedDate.getDate()).padStart(2, '0')}`;
+
+      try {
+        const res = await fetch(`${API_BASE}/api/book`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, phone, email, date: dateStr, time: selectedTime }),
+        });
+
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          const dayStr = selectedDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+          document.getElementById('booked-detail').textContent = dayStr + ' at ' + selectedTime + ' \u2014 we\u2019ll send a confirmation to ' + email + '.';
+          showView('booked');
+        } else {
+          console.error('Booking failed:', data);
+          btn.textContent = 'Try Again';
+          btn.style.opacity = '1';
+          btn.disabled = false;
+          alert('Something went wrong booking your appointment. Please try again or call us at (619) 444-3264.');
+        }
+      } catch (err) {
+        console.error('Booking request failed:', err);
+        btn.textContent = 'Try Again';
+        btn.style.opacity = '1';
+        btn.disabled = false;
+        alert('Connection error. Please try again or call us at (619) 444-3264.');
+      }
+    });
+  }
+
+  // Phone formatting for calendar form
+  const calPhone = document.getElementById('cal-phone');
+  if (calPhone) {
+    calPhone.addEventListener('input', function(e) {
+      let v = e.target.value.replace(/\D/g, '');
+      if (v.length > 10) v = v.slice(0, 10);
+      if (v.length >= 7) e.target.value = '(' + v.slice(0,3) + ') ' + v.slice(3,6) + '-' + v.slice(6);
+      else if (v.length >= 4) e.target.value = '(' + v.slice(0,3) + ') ' + v.slice(3);
+      else if (v.length >= 1) e.target.value = '(' + v;
+    });
+  }
+})();
+</script>
+</body>
+</html>

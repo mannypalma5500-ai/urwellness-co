@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wellness Co | Clinical Wellness &amp; Med Spa — San Diego</title>
+<meta name="description" content="San Diego's premier clinical wellness destination. Hormone optimization, IV therapy, peptides, SoftWave therapy, and the CLARITY™ Membership. Founded by Jennifer Fedeli">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   THE WELLNESS CO — V2: Apple iPhone Lineup Layout
+   Neon-pop bag colors on gradient card backgrounds
+   Horizontal scroll, product-hero approach
+   ═══════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --white: #FFFFFF;
+  --obsidian: #1A1A1A;
+  --gold: #C9A96E;
+  --gold-hover: #B8963F;
+  --taupe: #7A6B5A;
+  --marble: #B8B0A8;
+  --linen: #F5F2EE;
+  --bg-light: #F5F5F7;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', -apple-system, sans-serif;
+
+  /* ── NEON PALETTE ── each service gets a saturated pop color */
+  --neon-gold:    #FFD700;
+  --neon-green:   #00FF87;
+  --neon-orange:  #FF8C00;
+  --neon-violet:  #BF5FFF;
+  --neon-blue:    #00D4FF;
+  --neon-rose:    #FF4F8B;
+  --neon-teal:    #00FFCC;
+  --neon-coral:   #FF6B4A;
+  --neon-lilac:   #D17FFF;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  color: var(--obsidian);
+  background: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* ── NAV ──────────────────────────────────────────────────── */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.92);
+  border-bottom: 1px solid rgba(184,176,168,0.2);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  transition: box-shadow 0.3s;
+}
+.nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+.nav-inner {
+  width: 100%;
+  padding: 0 2rem; height: 72px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: var(--serif); font-size: 1rem; font-weight: 500;
+  letter-spacing: 3px; color: var(--obsidian);
+  text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a {
+  font-size: 0.85rem; font-weight: 500; color: var(--taupe);
+  letter-spacing: 0.03em; text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--obsidian); }
+.nav-cta {
+  background: var(--gold); color: var(--white) !important;
+  padding: 0.6rem 1.5rem; border-radius: 6px;
+  font-weight: 600; transition: all 0.3s;
+  box-shadow: 0 0 12px rgba(201,169,110,0.4), 0 0 24px rgba(201,169,110,0.15);
+}
+.nav-cta:hover { background: var(--gold-hover); box-shadow: 0 0 18px rgba(201,169,110,0.6), 0 0 36px rgba(201,169,110,0.25); }
+.nav-phone {
+  font-size: 0.8rem; color: var(--taupe) !important;
+  text-transform: none !important; letter-spacing: 0 !important;
+}
+
+/* Mobile nav toggle */
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--obsidian); margin: 5px 0; transition: 0.3s; }
+
+/* ── HERO ─────────────────────────────────────────────────── */
+.hero {
+  padding: 10rem 2rem 6rem;
+  background: linear-gradient(135deg, var(--white) 0%, var(--linen) 100%);
+  position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ''; position: absolute; top: -50%; right: -20%;
+  width: 700px; height: 700px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  position: relative; z-index: 1;
+}
+.hero-badge {
+  display: inline-block; font-size: 0.7rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.15em;
+  color: var(--taupe); border: 1px solid var(--marble);
+  padding: 0.4rem 1rem; border-radius: 50px; margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-family: var(--serif); font-size: 3.4rem; font-weight: 600;
+  line-height: 1.15; margin-bottom: 1.5rem; color: var(--obsidian);
+}
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero-sub {
+  font-size: 1.1rem; color: var(--taupe); line-height: 1.7;
+  max-width: 480px; margin-bottom: 2.5rem;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-gold {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--gold); color: var(--white);
+  padding: 0.9rem 2rem; border-radius: 8px; font-weight: 600;
+  font-size: 0.95rem; transition: all 0.25s; border: none; cursor: pointer;
+}
+.btn-gold:hover { background: var(--gold-hover); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(201,169,110,0.3); }
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: transparent; color: var(--obsidian);
+  padding: 0.9rem 2rem; border-radius: 8px; font-weight: 600;
+  font-size: 0.95rem; border: 1.5px solid var(--marble);
+  transition: all 0.25s; cursor: pointer;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Hero image placeholder */
+.hero-visual { display: flex; justify-content: center; align-items: center; }
+.hero-img-placeholder {
+  width: 100%; max-width: 480px; aspect-ratio: 4/5;
+  background: linear-gradient(145deg, var(--linen), #e8e4df);
+  border-radius: 24px; display: flex; align-items: center; justify-content: center;
+  color: var(--marble); font-size: 0.85rem; text-align: center; padding: 2rem;
+  border: 1px solid rgba(184,176,168,0.3);
+}
+
+/* ── TRUST BAR ────────────────────────────────────────────── */
+.trust-bar {
+  padding: 3rem 2rem;
+  background: var(--white);
+  border-bottom: 1px solid rgba(184,176,168,0.2);
+}
+.trust-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: center; gap: 3rem;
+  flex-wrap: wrap;
+}
+.trust-item {
+  font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--marble);
+}
+.trust-divider { width: 1px; height: 20px; background: var(--marble); opacity: 0.4; }
+
+/* ── SECTION SHARED ───────────────────────────────────────── */
+.section { padding: 6rem 2rem; }
+.section-linen { background: var(--linen); }
+.section-header {
+  max-width: 1280px; margin: 0 auto 3rem;
+  text-align: center;
+}
+.section-label {
+  font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.15em; color: var(--taupe); margin-bottom: 0.75rem;
+}
+.section-title {
+  font-family: var(--serif); font-size: 2.4rem; font-weight: 600;
+  color: var(--obsidian); line-height: 1.2;
+}
+.section-title em { font-style: italic; color: var(--gold); }
+.section-subtitle {
+  font-size: 1rem; color: var(--taupe); margin-top: 0.75rem;
+  max-width: 520px; margin-left: auto; margin-right: auto;
+}
+.section-right-link {
+  font-size: 0.9rem; color: var(--gold); font-weight: 500;
+  transition: color 0.2s; cursor: pointer;
+}
+.section-right-link:hover { color: var(--gold-hover); }
+.section-header-row {
+  max-width: 1280px; margin: 0 auto 2.5rem;
+  display: flex; align-items: flex-end; justify-content: space-between;
+}
+.section-header-row .section-label { margin-bottom: 0.5rem; }
+
+/* ════════════════════════════════════════════════════════════
+   PRIMARY SERVICES — Horizontal Scroll Lineup (bigger than IV)
+   ════════════════════════════════════════════════════════════ */
+
+.primary-section {
+  padding: 6rem 0 4rem;
+  background: var(--white);
+  overflow: hidden;
+}
+.primary-inner {
+  max-width: 1280px; margin: 0 auto;
+}
+.primary-header {
+  max-width: 1280px; margin: 0 auto 2.5rem;
+  padding: 0 2rem;
+}
+
+.primary-track-wrap {
+  position: relative;
+  padding: 0 0 2rem;
+}
+.primary-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 2rem 1.5rem;
+  justify-content: center;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.primary-track::-webkit-scrollbar { display: none; }
+
+/* Scroll arrows for primary */
+.primary-arrow {
+  position: absolute; top: 45%; transform: translateY(-50%);
+  width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(0,0,0,0.08);
+  backdrop-filter: blur(12px);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; z-index: 10;
+  transition: all 0.2s;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+}
+.primary-arrow:hover {
+  background: var(--white);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+.primary-arrow svg { width: 20px; height: 20px; fill: none; stroke: var(--obsidian); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.primary-arrow-left { left: 1rem; }
+.primary-arrow-right { right: 1rem; }
+.primary-arrow.hidden { opacity: 0; pointer-events: none; }
+
+/* Individual service card */
+.primary-lineup-card {
+  flex: 0 0 266px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.primary-lineup-visual {
+  width: 100%; height: 308px;
+  border-radius: 20px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s;
+}
+.primary-lineup-card:hover .primary-lineup-visual {
+  transform: scale(1.08);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.15);
+}
+
+/* Shimmer overlay */
+.primary-lineup-visual::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 50%, rgba(255,255,255,0.08) 100%);
+  pointer-events: none;
+}
+
+/* Centered icon */
+.primary-lineup-icon {
+  position: relative; z-index: 2;
+  width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0.85;
+  transition: transform 0.4s, opacity 0.4s;
+}
+.primary-lineup-card:hover .primary-lineup-icon {
+  transform: translateY(-12px) scale(1.15);
+  opacity: 1;
+}
+.primary-lineup-icon svg {
+  width: 100%; height: 100%;
+  fill: none; stroke: rgba(26,26,26,0.5);
+  stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* Tag badge on the visual */
+.primary-lineup-tag {
+  position: absolute; top: 18px; left: 18px; z-index: 3;
+  font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white);
+}
+
+/* Info below card */
+.primary-lineup-name {
+  font-family: var(--serif); font-size: 1.15rem; font-weight: 600;
+  color: var(--obsidian); margin-bottom: 0.35rem;
+}
+.primary-lineup-desc {
+  font-size: 0.8rem; color: var(--taupe); line-height: 1.5;
+  max-width: 240px; margin: 0 auto 0.75rem;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.primary-lineup-cta {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.88rem; font-weight: 600; color: var(--gold);
+  transition: gap 0.2s;
+}
+.primary-lineup-card:hover .primary-lineup-cta { gap: 0.7rem; }
+.primary-lineup-cta svg {
+  width: 16px; height: 16px; fill: none;
+  stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* ── Additional services row (Sauna, TRT, etc.) ── */
+.additional-services {
+  max-width: 1280px; margin: 2rem auto 0;
+  display: flex; gap: 0.75rem; flex-wrap: wrap;
+  justify-content: center;
+}
+.additional-chip {
+  font-size: 0.78rem; font-weight: 500; color: var(--taupe);
+  padding: 0.55rem 1.25rem; border-radius: 50px;
+  border: 1.5px solid var(--marble);
+  background: var(--white);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.additional-chip:hover {
+  border-color: var(--gold); color: var(--gold);
+  background: rgba(201,169,110,0.04);
+}
+
+/* ════════════════════════════════════════════════════════════
+   SOFTWAVE HERO SECTION — Big featured offering with video
+   ════════════════════════════════════════════════════════════ */
+
+.softwave-hero {
+  padding: 6rem 2rem;
+  background: var(--obsidian);
+  position: relative; overflow: hidden;
+}
+.softwave-hero::before {
+  content: ''; position: absolute; top: -40%; left: -15%;
+  width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,110,0.12) 0%, transparent 70%);
+}
+.softwave-hero::after {
+  content: ''; position: absolute; bottom: -30%; right: -10%;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%);
+}
+.softwave-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+  align-items: center;
+  position: relative; z-index: 1;
+}
+.softwave-content .section-label { color: var(--gold); margin-bottom: 0.75rem; }
+.softwave-title {
+  font-family: var(--serif); font-size: 2.8rem; font-weight: 600;
+  color: var(--white); line-height: 1.15; margin-bottom: 1.5rem;
+}
+.softwave-title em { font-style: italic; color: var(--gold); }
+.softwave-desc {
+  font-size: 1rem; color: rgba(255,255,255,0.6); line-height: 1.8;
+  margin-bottom: 1.5rem; max-width: 480px;
+}
+.softwave-stats {
+  display: flex; gap: 2.5rem; margin-bottom: 2rem;
+}
+.softwave-stat-num {
+  font-family: var(--serif); font-size: 2rem; font-weight: 600;
+  color: var(--gold); line-height: 1;
+}
+.softwave-stat-label {
+  font-size: 0.75rem; color: rgba(255,255,255,0.45);
+  text-transform: uppercase; letter-spacing: 0.08em;
+  margin-top: 0.3rem;
+}
+.softwave-badges {
+  display: flex; gap: 0.75rem; margin-bottom: 2rem; flex-wrap: wrap;
+}
+.softwave-badge {
+  font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.1em; color: rgba(255,255,255,0.6);
+  padding: 0.4rem 1rem; border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+}
+
+/* Video placeholder */
+.softwave-video-wrap {
+  position: relative; border-radius: 20px; overflow: hidden;
+  aspect-ratio: 16/10;
+  background: linear-gradient(135deg, #1A1816 0%, #2D2518 50%, #3A3020 100%);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: transform 0.4s, box-shadow 0.4s;
+  border: 1px solid rgba(201,169,110,0.15);
+}
+.softwave-video-wrap:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 60px rgba(201,169,110,0.15);
+}
+/* Play button */
+.play-btn {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: rgba(201,169,110,0.9);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.3s, background 0.3s;
+  position: relative; z-index: 2;
+}
+.softwave-video-wrap:hover .play-btn {
+  transform: scale(1.1);
+  background: var(--gold);
+}
+.play-btn svg {
+  width: 24px; height: 24px; fill: white;
+  margin-left: 3px; /* optical centering for play triangle */
+}
+.video-label {
+  position: absolute; bottom: 1.25rem; left: 1.25rem; z-index: 2;
+  font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.1em; color: rgba(255,255,255,0.5);
+}
+.video-duration {
+  position: absolute; bottom: 1.25rem; right: 1.25rem; z-index: 2;
+  font-size: 0.7rem; font-weight: 500; color: rgba(255,255,255,0.4);
+}
+
+/* ════════════════════════════════════════════════════════════
+   V2 — APPLE LINEUP HORIZONTAL SCROLL CARDS
+   Each card = gradient background + big floating IV bag + info below
+   ════════════════════════════════════════════════════════════ */
+
+.lineup-section {
+  padding: 6rem 0 5rem;
+  background: var(--bg-light);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Header with "Compare all services" link */
+.lineup-header {
+  max-width: 1280px; margin: 0 auto 2.5rem;
+  padding: 0 2rem;
+  display: flex; align-items: flex-end; justify-content: space-between;
+}
+.lineup-header .section-label { margin-bottom: 0.5rem; }
+.lineup-header .section-title { text-align: left; }
+
+/* The horizontal scroll track */
+.lineup-track-wrap {
+  position: relative;
+  padding: 0 0 2rem;
+}
+.lineup-track {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 2rem 1.5rem;
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.lineup-track::-webkit-scrollbar { display: none; }
+
+/* Scroll arrows */
+.lineup-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 44px; height: 44px; border-radius: 50%;
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(0,0,0,0.08);
+  backdrop-filter: blur(12px);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; z-index: 10;
+  transition: all 0.2s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.lineup-arrow:hover {
+  background: var(--white);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+.lineup-arrow svg { width: 18px; height: 18px; fill: none; stroke: var(--obsidian); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.lineup-arrow-left { left: 1rem; }
+.lineup-arrow-right { right: 1rem; }
+.lineup-arrow.hidden { opacity: 0; pointer-events: none; }
+
+/* ── Individual lineup card ── */
+.lineup-card {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+/* The gradient product image area */
+.lineup-visual {
+  width: 100%; height: 380px;
+  border-radius: 24px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.lineup-card:hover .lineup-visual {
+  transform: scale(1.05);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+/* Subtle shimmer overlay on gradient */
+.lineup-visual::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 50%, rgba(255,255,255,0.06) 100%);
+  pointer-events: none;
+}
+
+/* The big bag — bigger than V1, centered hero product */
+.lineup-bag {
+  position: relative; z-index: 2;
+  width: 160px; height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.25)) drop-shadow(0 8px 16px rgba(0,0,0,0.12));
+  animation: lineupFloat 5s ease-in-out infinite;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s;
+}
+.lineup-card:hover .lineup-bag {
+  transform: translateY(-18px) scale(1.15);
+  filter: drop-shadow(0 35px 70px rgba(0,0,0,0.35)) drop-shadow(0 15px 30px rgba(0,0,0,0.2));
+}
+
+/* Stagger float per card */
+.lineup-card:nth-child(2) .lineup-bag { animation-delay: -0.6s; }
+.lineup-card:nth-child(3) .lineup-bag { animation-delay: -1.2s; }
+.lineup-card:nth-child(4) .lineup-bag { animation-delay: -1.8s; }
+.lineup-card:nth-child(5) .lineup-bag { animation-delay: -2.4s; }
+.lineup-card:nth-child(6) .lineup-bag { animation-delay: -3.0s; }
+.lineup-card:nth-child(7) .lineup-bag { animation-delay: -3.6s; }
+.lineup-card:nth-child(8) .lineup-bag { animation-delay: -4.2s; }
+.lineup-card:nth-child(9) .lineup-bag { animation-delay: -0.9s; }
+
+@keyframes lineupFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Tag badge (like "New" on iPhone 17e) */
+.lineup-tag {
+  position: absolute; top: 16px; right: 16px; z-index: 3;
+  font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  color: var(--white);
+}
+
+/* Color dots row (like iPhone color picker) */
+.lineup-dots {
+  display: flex; gap: 6px; justify-content: center;
+  margin-bottom: 1rem;
+}
+.lineup-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  opacity: 0.6;
+}
+.lineup-dot.active { opacity: 1; outline: 1.5px solid var(--obsidian); outline-offset: 2px; }
+
+/* Info below the card */
+.lineup-name {
+  font-family: var(--serif); font-size: 1.35rem; font-weight: 600;
+  color: var(--obsidian); margin-bottom: 0.5rem;
+}
+.lineup-desc {
+  font-size: 0.88rem; color: var(--taupe); line-height: 1.55;
+  max-width: 280px; margin: 0 auto 0.75rem;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.lineup-price {
+  font-size: 0.92rem; color: var(--obsidian); font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+.lineup-price strong { font-weight: 700; }
+
+/* CTA buttons row */
+.lineup-actions {
+  display: flex; gap: 0.75rem; justify-content: center; align-items: center;
+}
+.lineup-btn-primary {
+  background: var(--gold); color: var(--white);
+  padding: 0.6rem 1.5rem; border-radius: 50px;
+  font-size: 0.82rem; font-weight: 600;
+  border: none; cursor: pointer;
+  transition: all 0.2s;
+}
+.lineup-btn-primary:hover { background: var(--gold-hover); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(201,169,110,0.3); }
+.lineup-btn-link {
+  font-size: 0.85rem; font-weight: 500; color: var(--gold);
+  cursor: pointer; transition: color 0.2s;
+  background: none; border: none;
+}
+.lineup-btn-link:hover { color: var(--gold-hover); }
+
+/* ── VIEW MORE BUTTON ── */
+.lineup-viewmore-wrap {
+  text-align: center;
+  margin-top: 2rem;
+}
+.lineup-viewmore {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--white); color: var(--obsidian);
+  padding: 0.85rem 2.5rem; border-radius: 50px;
+  font-size: 0.9rem; font-weight: 600;
+  border: 1.5px solid rgba(0,0,0,0.1);
+  cursor: pointer; transition: all 0.25s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.lineup-viewmore:hover {
+  border-color: var(--gold); color: var(--gold);
+  box-shadow: 0 4px 16px rgba(201,169,110,0.15);
+  transform: translateY(-1px);
+}
+.lineup-viewmore svg {
+  width: 16px; height: 16px; fill: none;
+  stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+  transition: transform 0.3s;
+}
+.lineup-viewmore.expanded svg { transform: rotate(180deg); }
+
+/* Hidden cards (5+) — initially collapsed */
+.lineup-card.lineup-hidden {
+  display: none;
+}
+.lineup-card.lineup-revealed {
+  display: flex;
+  animation: lineupFadeIn 0.5s ease forwards;
+}
+@keyframes lineupFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── CLARITY MEMBERSHIP SECTION ───────────────────────────── */
+.clarity-section {
+  padding: 6rem 2rem;
+  background: var(--linen);
+  color: var(--obsidian);
+  position: relative; overflow: hidden;
+}
+.clarity-section::before {
+  content: ''; position: absolute; top: -30%; right: -10%;
+  width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,110,0.1) 0%, transparent 70%);
+}
+.clarity-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+  align-items: center; position: relative; z-index: 1;
+}
+.clarity-label {
+  font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.15em; color: var(--gold); margin-bottom: 1rem;
+}
+.clarity-title {
+  font-family: var(--serif); font-size: 2.6rem; font-weight: 600;
+  line-height: 1.2; margin-bottom: 1.5rem;
+}
+.clarity-title em { font-style: italic; color: var(--gold); }
+.clarity-desc {
+  font-size: 1rem; color: var(--taupe); line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.tier-cards { display: flex; flex-direction: column; gap: 1rem; }
+.tier-card {
+  background: var(--white);
+  border: 1px solid rgba(184,176,168,0.25);
+  border-radius: 12px; padding: 1.5rem;
+  transition: all 0.3s;
+}
+.tier-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 4px 16px rgba(201,169,110,0.12);
+}
+.tier-name {
+  font-family: var(--serif); font-size: 1.1rem; font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.tier-price {
+  font-size: 0.85rem; color: var(--gold); font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.tier-highlight {
+  font-size: 0.8rem; color: var(--taupe); line-height: 1.6;
+}
+
+/* ── PROVIDER / ABOUT ─────────────────────────────────────── */
+.about-grid {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+  align-items: center;
+}
+.about-img-placeholder {
+  width: 100%; aspect-ratio: 3/4; border-radius: 20px;
+  background: linear-gradient(145deg, var(--linen), #e8e4df);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--marble); font-size: 0.85rem; text-align: center;
+  padding: 2rem; border: 1px solid rgba(184,176,168,0.3);
+}
+.about-text .section-label { margin-bottom: 0.5rem; }
+.about-text h2 {
+  font-family: var(--serif); font-size: 2.2rem; font-weight: 600;
+  line-height: 1.2; margin-bottom: 1.5rem;
+}
+.about-text h2 em { font-style: italic; color: var(--gold); }
+.about-text p {
+  font-size: 0.95rem; color: var(--taupe); line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.about-credentials {
+  display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;
+}
+.credential {
+  font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--taupe);
+  padding: 0.5rem 1rem; border: 1px solid var(--marble);
+  border-radius: 6px;
+}
+
+/* ── CTA BANNER ───────────────────────────────────────────── */
+.cta-banner {
+  padding: 5rem 2rem;
+  background: var(--linen);
+  text-align: center;
+}
+.cta-banner h2 {
+  font-family: var(--serif); font-size: 2.4rem; font-weight: 600;
+  margin-bottom: 1rem;
+}
+.cta-banner h2 em { font-style: italic; color: var(--gold); }
+.cta-banner p {
+  font-size: 1rem; color: var(--taupe); max-width: 500px;
+  margin: 0 auto 2rem; line-height: 1.7;
+}
+
+/* ── FOOTER ───────────────────────────────────────────────── */
+.footer {
+  background: var(--obsidian); color: rgba(255,255,255,0.5);
+  padding: 4rem 2rem 2rem;
+}
+.footer-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
+}
+.footer-brand {
+  font-family: var(--serif); font-size: 1.2rem; font-weight: 600;
+  color: var(--white); margin-bottom: 1rem;
+}
+.footer-brand span { color: var(--gold); }
+.footer-desc { font-size: 0.85rem; line-height: 1.7; margin-bottom: 1rem; }
+.footer h4 {
+  font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--gold); margin-bottom: 1rem;
+}
+.footer ul { list-style: none; }
+.footer li { margin-bottom: 0.5rem; }
+.footer a { font-size: 0.85rem; color: rgba(255,255,255,0.5); transition: color 0.2s; }
+.footer a:hover { color: var(--gold); }
+.footer-bottom {
+  max-width: 1280px; margin: 3rem auto 0;
+  padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.75rem; flex-wrap: wrap; gap: 1rem;
+}
+
+/* ── WELLNESS CO CLUB — BASE + ADD-ON LAYOUT ─────────────── */
+.club-section {
+  padding: 6rem 2rem;
+  background: var(--linen);
+  position: relative; overflow: hidden;
+  color: var(--obsidian);
+}
+.club-section::before {
+  content: ''; position: absolute; top: -20%; right: -10%;
+  width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,110,0.1) 0%, transparent 70%);
+}
+.club-top {
+  max-width: 1280px; margin: 0 auto;
+  position: relative; z-index: 1;
+}
+.club-header {
+  text-align: center; margin-bottom: 3rem;
+}
+.club-label {
+  font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.15em; color: var(--gold); margin-bottom: 0.75rem;
+}
+.club-title {
+  font-family: var(--serif); font-size: 2.6rem; font-weight: 600;
+  line-height: 1.2; margin-bottom: 1rem;
+}
+.club-title em { font-style: italic; color: var(--gold); }
+.club-subtitle {
+  font-size: 1rem; color: var(--taupe); max-width: 600px;
+  margin: 0 auto; line-height: 1.7;
+}
+.club-price-header {
+  text-align: center; margin-bottom: 2.5rem;
+}
+.club-price-big {
+  font-family: var(--serif); font-size: 3.5rem; font-weight: 700;
+  color: var(--gold); line-height: 1;
+}
+.club-price-per {
+  font-size: 0.9rem; color: var(--taupe);
+}
+
+/* Base + Add-on layout */
+.club-cards-row {
+  display: flex; align-items: center; justify-content: center;
+  gap: 2rem; margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+.club-pick-card {
+  background: var(--white);
+  border: 1.5px solid rgba(184,176,168,0.25);
+  border-radius: 20px; padding: 2rem;
+  width: 380px;
+  transition: all 0.3s;
+}
+.club-pick-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 4px 16px rgba(201,169,110,0.12);
+}
+.club-pick-label {
+  font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.2em; color: var(--gold); margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(184,176,168,0.15);
+}
+.club-pick-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.7rem 0.85rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  background: var(--linen);
+  border: 1px solid rgba(184,176,168,0.15);
+  transition: all 0.2s;
+}
+.club-pick-item:hover {
+  background: rgba(201,169,110,0.08);
+  border-color: rgba(201,169,110,0.3);
+}
+.club-pick-item:last-child { margin-bottom: 0; }
+.club-pick-name {
+  font-size: 0.88rem; font-weight: 500;
+}
+.club-pick-value {
+  font-size: 0.8rem; color: var(--gold); font-weight: 600;
+}
+
+.club-plus {
+  font-family: var(--serif); font-size: 2.5rem; font-weight: 300;
+  color: var(--gold); opacity: 0.6;
+  flex-shrink: 0;
+}
+
+/* VIP Perks row */
+.club-perks-row {
+  display: flex; justify-content: center; gap: 1.25rem;
+  flex-wrap: wrap; margin-bottom: 2.5rem;
+}
+.club-perk-badge {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: var(--white);
+  border: 1px solid rgba(184,176,168,0.25);
+  border-radius: 50px;
+  padding: 0.65rem 1.5rem;
+  transition: all 0.2s;
+}
+.club-perk-badge:hover {
+  border-color: var(--gold);
+  box-shadow: 0 2px 12px rgba(201,169,110,0.1);
+}
+.club-perk-badge-icon {
+  font-size: 1.1rem;
+}
+.club-perk-badge-text {
+  font-size: 0.82rem; font-weight: 500; color: var(--taupe);
+}
+
+.club-cta-row {
+  text-align: center;
+}
+.club-use-note {
+  font-size: 0.8rem; color: var(--marble);
+  margin-top: 1rem;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hero-inner, .clarity-inner, .about-grid, .club-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .hero h1 { font-size: 2.6rem; }
+  .hero-visual { display: none; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .softwave-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .softwave-title { font-size: 2.2rem; }
+  .primary-lineup-card { flex: 0 0 240px; }
+  .primary-lineup-visual { height: 280px; border-radius: 18px; }
+  .primary-lineup-icon { width: 50px; height: 50px; }
+  .lineup-card { flex: 0 0 280px; }
+  .lineup-visual { height: 340px; }
+  .lineup-bag { width: 140px; }
+}
+@media (max-width: 1024px) {
+  .club-cards-row { flex-direction: column; }
+  .club-pick-card { width: 100%; max-width: 480px; }
+  .club-plus { transform: rotate(90deg); }
+}
+@media (max-width: 768px) {
+  .club-title { font-size: 2rem; }
+  .club-price-big { font-size: 2.8rem; }
+  .club-section { padding: 4rem 1.5rem; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .hero { padding: 8rem 1.5rem 4rem; }
+  .hero h1 { font-size: 2.2rem; }
+  .section { padding: 4rem 1.5rem; }
+  .section-title { font-size: 1.8rem; }
+  .primary-section { padding: 4rem 1.5rem 3rem; }
+  .primary-lineup-card { flex: 0 0 220px; }
+  .primary-lineup-visual { height: 240px; border-radius: 16px; }
+  .primary-lineup-icon { width: 44px; height: 44px; }
+  .primary-lineup-name { font-size: 1rem; }
+  .softwave-hero { padding: 4rem 1.5rem; }
+  .softwave-title { font-size: 1.8rem; }
+  .softwave-stats { gap: 1.5rem; }
+  .softwave-stat-num { font-size: 1.5rem; }
+  .lineup-section { padding: 4rem 0 3rem; }
+  .lineup-header { padding: 0 1.5rem; }
+  .lineup-card { flex: 0 0 260px; }
+  .lineup-visual { height: 300px; border-radius: 18px; }
+  .lineup-bag { width: 120px; }
+  .lineup-name { font-size: 1.15rem; }
+  .clarity-title { font-size: 2rem; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">THE WELLNESS CO.</a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#clarity">CLARITY&trade;</a>
+      <a href="#softwave">SoftWave</a>
+      <a href="#club">Club</a>
+      <a href="#about">About</a>
+      <a href="tel:6194443264" class="nav-phone">(619) 444-3264</a>
+      <a href="/book.html" class="nav-cta">Book Now</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">Clinical Wellness &bull; San Diego</div>
+      <h1>Where clinical precision meets <em>total wellness</em></h1>
+      <p class="hero-sub">Hormone optimization, IV therapy, regenerative treatments, and personalized wellness protocols — all under one roof, guided by a provider who actually listens.</p>
+      <div class="hero-actions">
+        <a href="/book.html" class="btn-gold">Book a Free Consultation</a>
+        <a href="#services" class="btn-outline">Browse Services</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-placeholder" style="background: linear-gradient(145deg, #F5F2EE 0%, #E8DCC8 30%, #C9A96E 70%, #1A1A1A 100%); border: none; position: relative; overflow: hidden;">
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;">
+          <div style="font-family:var(--serif);font-size:2.2rem;font-weight:600;color:rgba(255,255,255,0.9);letter-spacing:2px;text-shadow:0 2px 12px rgba(0,0,0,0.3);">TWC</div>
+          <div style="width:40px;height:1px;background:rgba(255,255,255,0.4);"></div>
+          <div style="font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:0.2em;color:rgba(255,255,255,0.5);">Clinical Wellness</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TRUST BAR ═══════════════ -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <span class="trust-item">Locally Owned</span>
+    <span class="trust-divider"></span>
+    <span class="trust-item">Women-Led</span>
+    <span class="trust-divider"></span>
+    <span class="trust-item">Clinical-Grade Protocols</span>
+    <span class="trust-divider"></span>
+    <span class="trust-item">CLARITY&trade; Memberships</span>
+    <span class="trust-divider"></span>
+    <span class="trust-item">San Diego, CA</span>
+  </div>
+</div>
+
+<section class="primary-section" id="services">
+  <div class="primary-header" style="text-align:center;">
+    <div class="section-label">Our Services</div>
+    <div class="section-title">Clinical programs designed for <em>results</em></div>
+  </div>
+
+  <div class="primary-track-wrap">
+    <button class="primary-arrow primary-arrow-left hidden" id="primary-arrow-left" aria-label="Scroll left">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="primary-arrow primary-arrow-right" id="primary-arrow-right" aria-label="Scroll right">
+      <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+    </button>
+
+    <div class="primary-track" id="primary-track">
+
+      <!-- HORMONES -->
+      <a href="/book.html" class="primary-lineup-card">
+        <div class="primary-lineup-visual" style="background: linear-gradient(160deg, #F5EEE4 0%, #E8DCC8 50%, #D8C8A8 100%);">
+          <span class="primary-lineup-tag">For Her &amp; Him</span>
+          <div class="primary-lineup-icon">
+            <svg viewBox="0 0 64 64"><circle cx="32" cy="20" r="8"/><path d="M20 52c0-8 5.4-14.4 12-14.4S44 44 44 52"/><path d="M32 28v8M28 32h8" stroke-width="1.2"/></svg>
+          </div>
+        </div>
+        <div class="primary-lineup-name">Hormone Optimization</div>
+        <div class="primary-lineup-desc">Personalized, lab-guided hormone protocols for men and women. Restore energy, clarity, and balance.</div>
+        <div class="primary-lineup-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></div>
+      </a>
+
+      <!-- PEPTIDES -->
+      <a href="/book.html" class="primary-lineup-card">
+        <div class="primary-lineup-visual" style="background: linear-gradient(160deg, #ECF0F0 0%, #D8E2E2 50%, #C0D0D0 100%);">
+          <span class="primary-lineup-tag">Targeted Therapy</span>
+          <div class="primary-lineup-icon">
+            <svg viewBox="0 0 64 64"><circle cx="22" cy="22" r="4"/><circle cx="42" cy="22" r="4"/><circle cx="32" cy="38" r="4"/><circle cx="22" cy="48" r="4"/><circle cx="42" cy="48" r="4"/><line x1="22" y1="26" x2="32" y2="34"/><line x1="42" y1="26" x2="32" y2="34"/><line x1="32" y1="42" x2="22" y2="44"/><line x1="32" y1="42" x2="42" y2="44"/></svg>
+          </div>
+        </div>
+        <div class="primary-lineup-name">Peptide Therapy</div>
+        <div class="primary-lineup-desc">BPC-157, Wolverine Stack, Lion Stack, and more. Tissue repair, cognitive enhancement, fat metabolism, performance.</div>
+        <div class="primary-lineup-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></div>
+      </a>
+
+      <!-- PAIN MANAGEMENT -->
+      <a href="/book.html" class="primary-lineup-card">
+        <div class="primary-lineup-visual" style="background: linear-gradient(160deg, #F2F0EE 0%, #E5E0DC 50%, #D2CCC4 100%);">
+          <span class="primary-lineup-tag">Regenerative</span>
+          <div class="primary-lineup-icon">
+            <svg viewBox="0 0 64 64"><path d="M32 12v40"/><path d="M22 22l10 10 10-10"/><path d="M16 32h32"/><circle cx="32" cy="32" r="18" stroke-dasharray="4 3"/></svg>
+          </div>
+        </div>
+        <div class="primary-lineup-name">Pain Management</div>
+        <div class="primary-lineup-desc">SoftWave therapy, regenerative protocols, and clinical interventions. Reduce pain without surgery.</div>
+        <div class="primary-lineup-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></div>
+      </a>
+
+      <!-- AESTHETICS -->
+      <a href="/book.html" class="primary-lineup-card">
+        <div class="primary-lineup-visual" style="background: linear-gradient(160deg, #F5ECF2 0%, #ECD8E8 50%, #DFC4D8 100%);">
+          <span class="primary-lineup-tag">Aesthetics</span>
+          <div class="primary-lineup-icon">
+            <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="10"/><path d="M22 48c0-6 4.5-10 10-10s10 4 10 10"/><path d="M38 20l4-4M26 20l-4-4" stroke-width="1.2"/></svg>
+          </div>
+        </div>
+        <div class="primary-lineup-name">Aesthetics &amp; Laser</div>
+        <div class="primary-lineup-desc">Botox, fillers, Morpheus8, chemical peels, laser hair removal, and PRP treatments.</div>
+        <div class="primary-lineup-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></div>
+      </a>
+
+      <!-- LIFESTYLE MANAGEMENT -->
+      <a href="/book.html" class="primary-lineup-card">
+        <div class="primary-lineup-visual" style="background: linear-gradient(160deg, #EDEDF2 0%, #DBDBE5 50%, #C5C5D5 100%);">
+          <span class="primary-lineup-tag">Whole-Person</span>
+          <div class="primary-lineup-icon">
+            <svg viewBox="0 0 64 64"><path d="M20 44c4-12 8-20 12-24s8 12 12 24"/><path d="M16 48h32"/><circle cx="32" cy="16" r="4"/><path d="M28 52v4M36 52v4"/></svg>
+          </div>
+        </div>
+        <div class="primary-lineup-name">Lifestyle Management</div>
+        <div class="primary-lineup-desc">Comprehensive wellness protocols. Nutrition, stress, sleep, and longevity — clinically guided.</div>
+        <div class="primary-lineup-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></div>
+      </a>
+
+      <!-- WEIGHT MANAGEMENT -->
+      <a href="/book.html" class="primary-lineup-card">
+        <div class="primary-lineup-visual" style="background: linear-gradient(160deg, #ECF5EC 0%, #D8E8D6 50%, #C4D8C0 100%);">
+          <span class="primary-lineup-tag">Results-Driven</span>
+          <div class="primary-lineup-icon">
+            <svg viewBox="0 0 64 64"><path d="M32 16v32M24 24l8-8 8 8"/><circle cx="32" cy="48" r="4"/><rect x="18" y="36" width="28" height="4" rx="2"/></svg>
+          </div>
+        </div>
+        <div class="primary-lineup-name">Weight Management</div>
+        <div class="primary-lineup-desc">Medically supervised HCG programs, appetite management, and metabolic optimization.</div>
+        <div class="primary-lineup-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></div>
+      </a>
+
+    </div><!-- /primary-track -->
+  </div>
+
+  <!-- Additional services chips -->
+  <div class="additional-services">
+    <a href="/book.html" class="additional-chip">Female HRT</a>
+    <a href="/book.html" class="additional-chip">Testosterone (TRT)</a>
+    <a href="/book.html" class="additional-chip">Infrared Sauna</a>
+    <a href="/book.html" class="additional-chip">Botox &amp; Dysport</a>
+    <a href="/book.html" class="additional-chip">Dermal Fillers</a>
+    <a href="/book.html" class="additional-chip">Laser Hair Removal</a>
+    <a href="/book.html" class="additional-chip">EmSculpt</a>
+    <a href="/book.html" class="additional-chip">Vitamin Injections</a>
+    <a href="/book.html" class="additional-chip">Vampire Facial</a>
+  </div>
+</section>
+
+<!-- ═══════════════ CLARITY™ MEMBERSHIP ═══════════════ -->
+<section class="clarity-section" id="clarity">
+  <div class="clarity-inner">
+    <div>
+      <div class="clarity-label">Hormone Membership Program</div>
+      <div class="clarity-title">The CLARITY&trade; <em>Membership</em></div>
+      <p class="clarity-desc">For men and women. Stop guessing. Start knowing. CLARITY&trade; is a hormone optimization program that combines clinical diagnostics, personalized protocols, and ongoing provider access — so you finally understand what your body needs and exactly how to get there.</p>
+      <a href="/book.html" class="btn-gold">Book a Free CLARITY&trade; Consultation</a>
+    </div>
+    <div class="tier-cards">
+      <div class="tier-card">
+        <div class="tier-name">CORE</div>
+        <div class="tier-price">$175/month</div>
+        <div class="tier-highlight">Prescription management, CLARITY Diagnostic Report, 10% off all services, basic portal access</div>
+      </div>
+      <div class="tier-card" style="border-color: var(--gold); background: rgba(201,169,110,0.06);">
+        <div class="tier-name">ELITE</div>
+        <div class="tier-price">$599/month</div>
+        <div class="tier-highlight">All hormone medications included, 2 lab panels/year, quarterly optimization reviews, concierge access, 15% off all services</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-name">TRANSFORMATION</div>
+        <div class="tier-price">$1,499/month</div>
+        <div class="tier-highlight">Everything in Elite plus $300/mo peptide credit, 4 lab panels/year, monthly reviews, VIP same-day concierge, wearable integration. Limited to 25 members.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SOFTWAVE — Featured Hero Section with Video
+     ═══════════════════════════════════════════════════════════ -->
+<section class="softwave-hero" id="softwave">
+  <div class="softwave-inner">
+    <div class="softwave-content">
+      <div class="section-label">Regenerative Technology</div>
+      <div class="softwave-title">SoftWave tissue regeneration. <em>No surgery. No downtime.</em></div>
+      <p class="softwave-desc">FDA-cleared shock wave technology that activates your body's own stem cells to heal damaged tissue, reduce chronic pain, and restore mobility — without needles, surgery, or recovery time.</p>
+
+      <div class="softwave-stats">
+        <div>
+          <div class="softwave-stat-num">87%</div>
+          <div class="softwave-stat-label">Pain Reduction</div>
+        </div>
+        <div>
+          <div class="softwave-stat-num">3–6</div>
+          <div class="softwave-stat-label">Sessions Typical</div>
+        </div>
+        <div>
+          <div class="softwave-stat-num">0</div>
+          <div class="softwave-stat-label">Days Downtime</div>
+        </div>
+      </div>
+
+      <div class="softwave-badges">
+        <span class="softwave-badge">FDA-Cleared</span>
+        <span class="softwave-badge">Non-Invasive</span>
+        <span class="softwave-badge">Stem Cell Activation</span>
+      </div>
+
+      <a href="/book.html" class="btn-gold">Book a SoftWave Session</a>
+      <div style="margin-top:1rem;font-size:0.9rem;color:rgba(255,255,255,0.5);">Starting at $300/session &bull; Club members save 20%</div>
+    </div>
+
+    <div class="softwave-video-wrap" style="cursor:default;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;">
+      <div style="font-family:var(--serif);font-size:3rem;font-weight:600;color:var(--gold);line-height:1;text-shadow:0 2px 12px rgba(201,169,110,0.3);">$300</div>
+      <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.12em;">Per Session</div>
+      <div style="width:50px;height:1px;background:rgba(201,169,110,0.3);"></div>
+      <div style="font-size:0.85rem;color:rgba(255,255,255,0.4);text-align:center;line-height:1.6;max-width:200px;">Club members save 20% on every session</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WELLNESS CO CLUB ═══════════════ -->
+<section class="club-section" id="club">
+  <div class="club-top">
+    <div class="club-header">
+      <div class="club-label">Membership</div>
+      <div class="club-title">The Wellness Co <em>Club</em></div>
+      <p class="club-subtitle">One premium service + one wellness add-on every month. VIP perks. 10% off everything else. Use it or lose it — no rollover, no guilt. Just show up and feel amazing.</p>
+    </div>
+
+    <div class="club-price-header">
+      <div class="club-price-big">$349</div>
+      <div class="club-price-per">/month</div>
+    </div>
+
+    <div class="club-cards-row">
+      <!-- BASE — Pick 1 -->
+      <div class="club-pick-card">
+        <div class="club-pick-label">Pick 1 Premium Service / Month</div>
+        <div class="club-pick-item">
+          <span class="club-pick-name">SoftWave 1 Area</span>
+          <span class="club-pick-value">$300 value</span>
+        </div>
+        <div class="club-pick-item">
+          <span class="club-pick-name">IV Myers' Cocktail</span>
+          <span class="club-pick-value">$399 value</span>
+        </div>
+        <div class="club-pick-item">
+          <span class="club-pick-name">Botox 1 Area</span>
+          <span class="club-pick-value">$240 value</span>
+        </div>
+        <div class="club-pick-item">
+          <span class="club-pick-name">DermaPen</span>
+          <span class="club-pick-value">$349 value</span>
+        </div>
+      </div>
+
+      <div class="club-plus">+</div>
+
+      <!-- ADD-ON 1 -->
+      <div class="club-pick-card">
+        <div class="club-pick-label">Plus Add-On 1 / Month</div>
+        <div class="club-pick-item">
+          <span class="club-pick-name">8 B12 Shots (2x/wk)</span>
+          <span class="club-pick-value">$144 value</span>
+        </div>
+        <div class="club-pick-item">
+          <span class="club-pick-name">Sauna + Shake Plate x4</span>
+          <span class="club-pick-value">$180 value</span>
+        </div>
+        <div class="club-pick-item">
+          <span class="club-pick-name">Red Light Therapy x4</span>
+          <span class="club-pick-value">$120 value</span>
+        </div>
+        <div class="club-pick-item">
+          <span class="club-pick-name">Thermography Scan</span>
+          <span class="club-pick-value">$200 value</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIP Perks Row -->
+    <div class="club-perks-row">
+      <div class="club-perk-badge">
+        <span class="club-perk-badge-icon">🎂</span>
+        <span class="club-perk-badge-text">Free Birthday Gift</span>
+      </div>
+      <div class="club-perk-badge">
+        <span class="club-perk-badge-icon">🏷️</span>
+        <span class="club-perk-badge-text">10% Off Everything Else</span>
+      </div>
+      <div class="club-perk-badge">
+        <span class="club-perk-badge-icon">⭐</span>
+        <span class="club-perk-badge-text">VIP Events with Dawn</span>
+      </div>
+      <div class="club-perk-badge">
+        <span class="club-perk-badge-icon">🔓</span>
+        <span class="club-perk-badge-text">Pre-Sale Access</span>
+      </div>
+    </div>
+
+    <div class="club-cta-row">
+      <a href="/book.html" class="btn-gold" style="font-size:1rem;padding:1rem 3rem;">Join the Club</a>
+      <p class="club-use-note">Use-it-or-lose-it monthly reset • No contracts • Cancel anytime</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     V2 — IV THERAPY LINEUP (APPLE STYLE)
+     ═══════════════════════════════════════════════════════════ -->
+<section class="lineup-section" id="iv-therapy">
+  <div class="lineup-header">
+    <div>
+      <div class="section-label">IV Therapy</div>
+      <div class="section-title">Explore the drip bar.</div>
+    </div>
+    <a href="#clarity" class="section-right-link">Compare all memberships ›</a>
+  </div>
+
+  <div class="lineup-track-wrap">
+    <!-- Scroll arrows -->
+    <button class="lineup-arrow lineup-arrow-left hidden" id="arrow-left" aria-label="Scroll left">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="lineup-arrow lineup-arrow-right" id="arrow-right" aria-label="Scroll right">
+      <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+    </button>
+
+    <div class="lineup-track" id="lineup-track">
+
+      <!-- ═══════ 1. NAD+ INFUSION ═══════ -->
+      <div class="lineup-card" data-cat="iv">
+        <div class="lineup-visual" style="background: linear-gradient(160deg, #F0ECF5 0%, #E0D6EC 40%, #D0C4E2 100%);">
+          <svg class="lineup-bag" viewBox="0 0 120 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 12C30 5.4 35.4 0 42 0h36c6.6 0 12 5.4 12 12v4H30v-4z" fill="#e8e4df"/>
+            <rect x="55" y="0" width="10" height="8" rx="5" fill="#d0cbc4"/>
+            <path d="M24 20h72c4.4 0 8 3.6 8 8v112c0 8.8-7.2 16-16 16H32c-8.8 0-16-7.2-16-16V28c0-4.4 3.6-8 8-8z" fill="#f5f2ee" stroke="#d0cbc4" stroke-width="1"/>
+            <rect x="28" y="40" width="64" height="72" rx="4" fill="#0D0D0D"/>
+            <text x="36" y="56" font-family="Inter,sans-serif" font-size="7" font-weight="800" fill="#BF5FFF" letter-spacing="0.8">NAD+</text>
+            <text x="36" y="67" font-family="Inter,sans-serif" font-size="4" fill="#888" letter-spacing="0.3">IV INFUSION</text>
+            <line x1="36" y1="71" x2="84" y2="71" stroke="#BF5FFF" stroke-width="0.75" opacity="0.6"/>
+            <text x="36" y="80" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">Meyer's Cocktail</text>
+            <text x="36" y="86" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">Glutathione Push</text>
+            <text x="36" y="92" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">NAD+ (High Dose)</text>
+            <text x="36" y="106" font-family="Inter,sans-serif" font-size="4.5" font-weight="600" fill="white" letter-spacing="0.5">THE WELLNESS CO</text>
+            <path d="M48 148h8v16a4 4 0 01-8 0v-16z" fill="#d0cbc4"/>
+            <path d="M64 148h8v16a4 4 0 01-8 0v-16z" fill="#d0cbc4"/>
+            <rect x="28" y="114" width="64" height="26" rx="0" fill="rgba(191,95,255,0.06)"/>
+          </svg>
+        </div>
+        <div class="lineup-dots">
+          <span class="lineup-dot active" style="background:#BF5FFF;"></span>
+          <span class="lineup-dot" style="background:#D9A8FF;"></span>
+          <span class="lineup-dot" style="background:#1A1A1A;"></span>
+        </div>
+        <div class="lineup-name">NAD+ Infusion</div>
+        <div class="lineup-desc">The ultimate anti-aging and brain restoration drip. Meyer's Cocktail + Glutathione Push + NAD+.</div>
+        <div class="lineup-price">From <strong>$1,299</strong></div>
+        <div class="lineup-actions">
+          <a href="/book.html" class="lineup-btn-primary">Book Now</a>
+          <a href="/book.html" class="lineup-btn-link">Learn more ›</a>
+        </div>
+      </div>
+
+      <!-- ═══════ 2. HYDRATION DRIP (NEW) ═══════ -->
+      <div class="lineup-card" data-cat="iv">
+        <div class="lineup-visual" style="background: linear-gradient(160deg, #ECF2F8 0%, #D6E6F0 40%, #C0D8E8 100%);">
+          <svg class="lineup-bag" viewBox="0 0 120 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 12C30 5.4 35.4 0 42 0h36c6.6 0 12 5.4 12 12v4H30v-4z" fill="#e8e4df"/>
+            <rect x="55" y="0" width="10" height="8" rx="5" fill="#d0cbc4"/>
+            <path d="M24 20h72c4.4 0 8 3.6 8 8v112c0 8.8-7.2 16-16 16H32c-8.8 0-16-7.2-16-16V28c0-4.4 3.6-8 8-8z" fill="#f5f2ee" stroke="#d0cbc4" stroke-width="1"/>
+            <rect x="28" y="40" width="64" height="72" rx="4" fill="#0D0D0D"/>
+            <text x="36" y="56" font-family="Inter,sans-serif" font-size="6" font-weight="800" fill="#00D4FF" letter-spacing="0.8">HYDRATION</text>
+            <text x="36" y="67" font-family="Inter,sans-serif" font-size="4" fill="#888" letter-spacing="0.3">IV FLUIDS / ELECTROLYTES</text>
+            <line x1="36" y1="71" x2="84" y2="71" stroke="#00D4FF" stroke-width="0.75" opacity="0.6"/>
+            <text x="36" y="80" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">Normal Saline</text>
+            <text x="36" y="86" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">Electrolytes</text>
+            <text x="36" y="92" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA"></text>
+            <text x="36" y="106" font-family="Inter,sans-serif" font-size="4.5" font-weight="600" fill="white" letter-spacing="0.5">THE WELLNESS CO</text>
+            <path d="M48 148h8v16a4 4 0 01-8 0v-16z" fill="#d0cbc4"/>
+            <path d="M64 148h8v16a4 4 0 01-8 0v-16z" fill="#d0cbc4"/>
+            <rect x="28" y="114" width="64" height="26" rx="0" fill="rgba(0,212,255,0.06)"/>
+          </svg>
+        </div>
+        <div class="lineup-dots">
+          <span class="lineup-dot active" style="background:#00D4FF;"></span>
+          <span class="lineup-dot" style="background:#80EAFF;"></span>
+          <span class="lineup-dot" style="background:#1A1A1A;"></span>
+        </div>
+        <div class="lineup-name">Hydration Drip</div>
+        <div class="lineup-desc">Rapid rehydration for dehydration, hangovers, travel fatigue, or athletic recovery.</div>
+        <div class="lineup-price">From <strong>$299</strong></div>
+        <div class="lineup-actions">
+          <a href="/book.html" class="lineup-btn-primary">Book Now</a>
+          <a href="/book.html" class="lineup-btn-link">Learn more ›</a>
+        </div>
+      </div>
+
+      <!-- ═══════ 3. ANTI-AGING DRIP ═══════ -->
+      <div class="lineup-card" data-cat="iv">
+        <div class="lineup-visual" style="background: linear-gradient(160deg, #F5F0E4 0%, #ECE2CC 40%, #E0D4B8 100%);">
+          <svg class="lineup-bag" viewBox="0 0 120 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 12C30 5.4 35.4 0 42 0h36c6.6 0 12 5.4 12 12v4H30v-4z" fill="#e8e4df"/>
+            <rect x="55" y="0" width="10" height="8" rx="5" fill="#d0cbc4"/>
+            <path d="M24 20h72c4.4 0 8 3.6 8 8v112c0 8.8-7.2 16-16 16H32c-8.8 0-16-7.2-16-16V28c0-4.4 3.6-8 8-8z" fill="#f5f2ee" stroke="#d0cbc4" stroke-width="1"/>
+            <rect x="28" y="40" width="64" height="72" rx="4" fill="#0D0D0D"/>
+            <text x="36" y="56" font-family="Inter,sans-serif" font-size="6.5" font-weight="800" fill="#FFD700" letter-spacing="0.8">ANTI-AGING</text>
+            <text x="36" y="67" font-family="Inter,sans-serif" font-size="4" fill="#888" letter-spacing="0.3">IV FLUIDS / VITAMINS</text>
+            <line x1="36" y1="71" x2="84" y2="71" stroke="#FFD700" stroke-width="0.75" opacity="0.6"/>
+            <text x="36" y="80" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">Vitamin C</text>
+            <text x="36" y="86" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">B-Complex &bull; Biotin</text>
+            <text x="36" y="92" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">Glutathione</text>
+            <text x="36" y="106" font-family="Inter,sans-serif" font-size="4.5" font-weight="600" fill="white" letter-spacing="0.5">THE WELLNESS CO</text>
+            <path d="M48 148h8v16a4 4 0 01-8 0v-16z" fill="#d0cbc4"/>
+            <path d="M64 148h8v16a4 4 0 01-8 0v-16z" fill="#d0cbc4"/>
+            <rect x="28" y="114" width="64" height="26" rx="0" fill="rgba(255,215,0,0.08)"/>
+          </svg>
+        </div>
+        <div class="lineup-dots">
+          <span class="lineup-dot active" style="background:#FFD700;"></span>
+          <span class="lineup-dot" style="background:#E8D5A0;"></span>
+          <span class="lineup-dot" style="background:#1A1A1A;"></span>
+        </div>
+        <div class="lineup-name">Anti-Aging Drip</div>
+        <div class="lineup-desc">Antioxidant powerhouse for radiant skin. Vitamin C, B-Complex, and Glutathione.</div>
+        <div class="lineup-price">From <strong>$399</strong></div>
+        <div class="lineup-actions">
+          <a href="/book.html" class="lineup-btn-primary">Book Now</a>
+          <a href="/book.html" class="lineup-btn-link">Learn more ›</a>
+        </div>
+      </div>
+
+      <!-- ═══════ 4. IMMUNITY BOOST ═══════ -->
+      <div class="lineup-card" data-cat="iv">
+        <div class="lineup-visual" style="background: linear-gradient(160deg, #ECF5F0 0%, #D6E8DC 40%, #C0D8C8 100%);">
+          <svg class="lineup-bag" viewBox="0 0 120 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 12C30 5.4 35.4 0 42 0h36c6.6 0 12 5.4 12 12v4H30v-4z" fill="#e8e4df"/>
+            <rect x="55" y="0" width="10" height="8" rx="5" fill="#d0cbc4"/>
+            <path d="M24 20h72c4.4 0 8 3.6 8 8v112c0 8.8-7.2 16-16 16H32c-8.8 0-16-7.2-16-16V28c0-4.4 3.6-8 8-8z" fill="#f5f2ee" stroke="#d0cbc4" stroke-width="1"/>
+            <rect x="28" y="40" width="64" height="72" rx="4" fill="#0D0D0D"/>
+            <text x="36" y="56" font-family="Inter,sans-serif" font-size="6.5" font-weight="800" fill="#00FF87" letter-spacing="0.8">IMMUNITY</text>
+            <text x="36" y="67" font-family="Inter,sans-serif" font-size="4" fill="#888" letter-spacing="0.3">IV FLUIDS / VITAMINS</text>
+            <line x1="36" y1="71" x2="84" y2="71" stroke="#00FF87" stroke-width="0.75" opacity="0.6"/>
+            <text x="36" y="80" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">Vitamin C &bull; Zinc</text>
+            <text x="36" y="86" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">B-Complex &bull; B12</text>
+            <text x="36" y="92" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">Magnesium &bull; Glutathione</text>
+            <text x="36" y="106" font-family="Inter,sans-serif" font-size="4.5" font-weight="600" fill="white" letter-spacing="0.5">THE WELLNESS CO</text>
+            <path d="M48 148h8v16a4 4 0 01-8 0v-16z" fill="#d0cbc4"/>
+            <path d="M64 148h8v16a4 4 0 01-8 0v-16z" fill="#d0cbc4"/>
+            <rect x="28" y="114" width="64" height="26" rx="0" fill="rgba(0,255,135,0.06)"/>
+          </svg>
+        </div>
+        <div class="lineup-dots">
+          <span class="lineup-dot active" style="background:#00FF87;"></span>
+          <span class="lineup-dot" style="background:#7DFFB8;"></span>
+          <span class="lineup-dot" style="background:#1A1A1A;"></span>
+        </div>
+        <div class="lineup-name">Immunity Boost</div>
+        <div class="lineup-desc">High-dose immune supercharger with Vitamin C, zinc, B-Complex, and B12.</div>
+        <div class="lineup-price">From <strong>$350</strong></div>
+        <div class="lineup-actions">
+          <a href="/book.html" class="lineup-btn-primary">Book Now</a>
+          <a href="/book.html" class="lineup-btn-link">Learn more ›</a>
+        </div>
+      </div>
+
+      <!-- ═══════ 5. ENERGY & RECOVERY ═══════ -->
+      <div class="lineup-card" data-cat="iv">
+        <div class="lineup-visual" style="background: linear-gradient(160deg, #F8F0E8 0%, #F0E0D0 40%, #E5D0B8 100%);">
+          <svg class="lineup-bag" viewBox="0 0 120 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 12C30 5.4 35.4 0 42 0h36c6.6 0 12 5.4 12 12v4H30v-4z" fill="#e8e4df"/>
+            <rect x="55" y="0" width="10" height="8" rx="5" fill="#d0cbc4"/>
+            <path d="M24 20h72c4.4 0 8 3.6 8 8v112c0 8.8-7.2 16-16 16H32c-8.8 0-16-7.2-16-16V28c0-4.4 3.6-8 8-8z" fill="#f5f2ee" stroke="#d0cbc4" stroke-width="1"/>
+            <rect x="28" y="40" width="64" height="72" rx="4" fill="#0D0D0D"/>
+            <text x="36" y="56" font-family="Inter,sans-serif" font-size="6.5" font-weight="800" fill="#FF8C00" letter-spacing="0.8">ENERGY</text>
+            <text x="36" y="67" font-family="Inter,sans-serif" font-size="4" fill="#888" letter-spacing="0.3">IV FLUIDS / VITAMINS</text>
+            <line x1="36" y1="71" x2="84" y2="71" stroke="#FF8C00" stroke-width="0.75" opacity="0.6"/>
+            <text x="36" y="80" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">Methyl B12</text>
+            <text x="36" y="86" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">L-Carnitine</text>
+            <text x="36" y="92" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">B-Complex</text>
+            <text x="36" y="106" font-family="Inter,sans-serif" font-size="4.5" font-weight="600" fill="white" letter-spacing="0.5">THE WELLNESS CO</text>
+            <path d="M48 148h8v16a4 4 0 01-8 0v-16z" fill="#d0cbc4"/>
+            <path d="M64 148h8v16a4 4 0 01-8 0v-16z" fill="#d0cbc4"/>
+            <rect x="28" y="114" width="64" height="26" rx="0" fill="rgba(255,140,0,0.08)"/>
+          </svg>
+        </div>
+        <div class="lineup-dots">
+          <span class="lineup-dot active" style="background:#FF8C00;"></span>
+          <span class="lineup-dot" style="background:#FFB366;"></span>
+          <span class="lineup-dot" style="background:#1A1A1A;"></span>
+        </div>
+        <div class="lineup-name">Energy &amp; Recovery</div>
+        <div class="lineup-desc">Athletic performance and fat-burning. Methyl B12, L-Carnitine, and B-Complex.</div>
+        <div class="lineup-price">From <strong>$350</strong></div>
+        <div class="lineup-actions">
+          <a href="/book.html" class="lineup-btn-primary">Book Now</a>
+          <a href="/book.html" class="lineup-btn-link">Learn more ›</a>
+        </div>
+      </div>
+
+      <!-- ═══════ MYERS' COCKTAIL ═══════ -->
+      <div class="lineup-card" data-cat="iv">
+        <div class="lineup-visual" style="background: linear-gradient(160deg, #F5ECF0 0%, #ECDCE4 40%, #E0C8D4 100%);">
+          <svg class="lineup-bag" viewBox="0 0 120 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 12C30 5.4 35.4 0 42 0h36c6.6 0 12 5.4 12 12v4H30v-4z" fill="#e8e4df"/>
+            <rect x="55" y="0" width="10" height="8" rx="5" fill="#d0cbc4"/>
+            <path d="M24 20h72c4.4 0 8 3.6 8 8v112c0 8.8-7.2 16-16 16H32c-8.8 0-16-7.2-16-16V28c0-4.4 3.6-8 8-8z" fill="#f5f2ee" stroke="#d0cbc4" stroke-width="1"/>
+            <rect x="28" y="40" width="64" height="72" rx="4" fill="#0D0D0D"/>
+            <text x="36" y="56" font-family="Inter,sans-serif" font-size="6" font-weight="800" fill="#FF4F8B" letter-spacing="0.8">MYERS'</text>
+            <text x="36" y="67" font-family="Inter,sans-serif" font-size="4" fill="#888" letter-spacing="0.3">IV COCKTAIL</text>
+            <line x1="36" y1="71" x2="84" y2="71" stroke="#FF4F8B" stroke-width="0.75" opacity="0.6"/>
+            <text x="36" y="80" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">Vitamin C &bull; Magnesium</text>
+            <text x="36" y="86" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">B12 &bull; B-Complex</text>
+            <text x="36" y="92" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA"></text>
+            <text x="36" y="106" font-family="Inter,sans-serif" font-size="4.5" font-weight="600" fill="white" letter-spacing="0.5">THE WELLNESS CO</text>
+            <path d="M48 148h8v16a4 4 0 01-8 0v-16z" fill="#d0cbc4"/>
+            <path d="M64 148h8v16a4 4 0 01-8 0v-16z" fill="#d0cbc4"/>
+            <rect x="28" y="114" width="64" height="26" rx="0" fill="rgba(255,79,139,0.06)"/>
+          </svg>
+        </div>
+        <div class="lineup-dots">
+          <span class="lineup-dot active" style="background:#FF4F8B;"></span>
+          <span class="lineup-dot" style="background:#FF9FBA;"></span>
+          <span class="lineup-dot" style="background:#1A1A1A;"></span>
+        </div>
+        <div class="lineup-name">Myers' Cocktail</div>
+        <div class="lineup-desc">The gold standard of IV therapy. Total body wellness and energy restoration.</div>
+        <div class="lineup-price">From <strong>$399</strong></div>
+        <div class="lineup-actions">
+          <a href="/book.html" class="lineup-btn-primary">Book Now</a>
+          <a href="/book.html" class="lineup-btn-link">Learn more ›</a>
+        </div>
+      </div>
+
+      <!-- ═══════ GOLDEN HOUR ═══════ -->
+      <div class="lineup-card" data-cat="iv">
+        <div class="lineup-visual" style="background: linear-gradient(160deg, #ECF5F2 0%, #D6E8E0 40%, #C0D8CC 100%);">
+          <svg class="lineup-bag" viewBox="0 0 120 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 12C30 5.4 35.4 0 42 0h36c6.6 0 12 5.4 12 12v4H30v-4z" fill="#e8e4df"/>
+            <rect x="55" y="0" width="10" height="8" rx="5" fill="#d0cbc4"/>
+            <path d="M24 20h72c4.4 0 8 3.6 8 8v112c0 8.8-7.2 16-16 16H32c-8.8 0-16-7.2-16-16V28c0-4.4 3.6-8 8-8z" fill="#f5f2ee" stroke="#d0cbc4" stroke-width="1"/>
+            <rect x="28" y="40" width="64" height="72" rx="4" fill="#0D0D0D"/>
+            <text x="36" y="56" font-family="Inter,sans-serif" font-size="5.5" font-weight="800" fill="#00FFCC" letter-spacing="0.8">GOLDEN HOUR</text>
+            <text x="36" y="67" font-family="Inter,sans-serif" font-size="4" fill="#888" letter-spacing="0.3">IV FLUIDS / VITAMINS</text>
+            <line x1="36" y1="71" x2="84" y2="71" stroke="#00FFCC" stroke-width="0.75" opacity="0.6"/>
+            <text x="36" y="80" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">B12 &bull; B-Complex</text>
+            <text x="36" y="86" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA">Magnesium &bull; Vitamin D3</text>
+            <text x="36" y="92" font-family="Inter,sans-serif" font-size="3.5" fill="#AAA"></text>
+            <text x="36" y="106" font-family="Inter,sans-serif" font-size="4.5" font-weight="600" fill="white" letter-spacing="0.5">THE WELLNESS CO</text>
+            <path d="M48 148h8v16a4 4 0 01-8 0v-16z" fill="#d0cbc4"/>
+            <path d="M64 148h8v16a4 4 0 01-8 0v-16z" fill="#d0cbc4"/>
+            <rect x="28" y="114" width="64" height="26" rx="0" fill="rgba(0,255,204,0.06)"/>
+          </svg>
+        </div>
+        <div class="lineup-dots">
+          <span class="lineup-dot active" style="background:#00FFCC;"></span>
+          <span class="lineup-dot" style="background:#80FFE0;"></span>
+          <span class="lineup-dot" style="background:#1A1A1A;"></span>
+        </div>
+        <div class="lineup-name">Golden Hour</div>
+        <div class="lineup-desc">Warm wellness glow — stress relief, bone health, and seasonal mood support.</div>
+        <div class="lineup-price">From <strong>$295</strong></div>
+        <div class="lineup-actions">
+          <a href="/book.html" class="lineup-btn-primary">Book Now</a>
+          <a href="/book.html" class="lineup-btn-link">Learn more ›</a>
+        </div>
+      </div>
+
+    </div><!-- /lineup-track -->
+
+    <!-- View More button -->
+    <div class="lineup-viewmore-wrap">
+      <a href="/book.html" class="lineup-viewmore">See all services &amp; pricing <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></a>
+    </div>
+
+    <!-- Bottom scroll indicators -->
+    <div style="display:flex; justify-content:center; gap:8px; margin-top:0.5rem;">
+      <button class="lineup-arrow" id="arrow-left-bottom" aria-label="Scroll left" style="position:static;transform:none;width:36px;height:36px;">
+        <svg viewBox="0 0 24 24" style="width:14px;height:14px;"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="lineup-arrow" id="arrow-right-bottom" aria-label="Scroll right" style="position:static;transform:none;width:36px;height:36px;">
+        <svg viewBox="0 0 24 24" style="width:14px;height:14px;"><polyline points="9 6 15 12 9 18"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ABOUT / TEAM ═══════════════ -->
+<section class="section" id="about">
+  <div class="about-grid">
+    <div class="about-img-placeholder" style="background: linear-gradient(145deg, #1A1A1A 0%, #2D2518 40%, #C9A96E 100%); border: none; position: relative; overflow: hidden;">
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.2rem;">
+        <div style="font-family:var(--serif);font-size:1.8rem;font-weight:600;color:rgba(255,255,255,0.85);letter-spacing:2px;text-shadow:0 2px 8px rgba(0,0,0,0.4);">Our Team</div>
+        <div style="width:40px;height:1px;background:var(--gold);opacity:0.6;"></div>
+        <div style="font-size:0.7rem;font-weight:500;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.15em;text-align:center;padding:0 2rem;">Jennifer Fedeli &bull; Dawn Philp, FNP<br>Janya Humphrey &bull; Leizyl Anglo, RN</div>
+      </div>
+    </div>
+    <div class="about-text">
+      <div class="section-label">Our Team</div>
+      <h2>Founded by Jennifer Fedeli. <em>Led by Dawn Philp, FNP.</em></h2>
+      <p>The Wellness Co was built because patients deserve better than 7-minute insurance appointments where nobody looks at the whole picture. Jennifer Fedeli founded this practice as a cash-pay wellness and optimization clinic focused on personalized, data-driven healthcare.</p>
+      <p>Dawn Philp, FNP, is the lead provider — with her MSN from Western University, DEA license, and recognition as an ACCMA trainer with 12+ years of clinical experience. She personally reviews every CLARITY lab panel because your health deserves someone who actually knows your name, your labs, and your goals.</p>
+      <div class="about-credentials">
+        <span class="credential">MSN — Western University</span>
+        <span class="credential">DEA Licensed</span>
+        <span class="credential">ACCMA Trainer</span>
+        <span class="credential">12+ Years Clinical</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA BANNER ═══════════════ -->
+<section class="cta-banner">
+  <h2>Ready to feel like <em>yourself</em> again?</h2>
+  <p>Book a free 15-minute CLARITY&trade; Consultation. No pressure, no commitment — just a conversation about what's possible.</p>
+  <a href="/book.html" class="btn-gold">Book Your Free Consultation</a>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">THE WELLNESS CO.</div>
+      <p class="footer-desc">Clinical wellness &amp; med spa in Santee, San Diego. Hormone optimization, IV therapy, regenerative treatments, and personalized wellness protocols.</p>
+      <p class="footer-desc" style="font-size:0.8rem;">
+        9658 Mission Gorge Rd, Santee, CA 92071<br>
+        <a href="tel:6194443264">(619) 444-3264</a> &bull;
+        <a href="mailto:info@urwellness.co">info@urwellness.co</a><br>
+        <a href="mailto:clarity@urwellness.co">clarity@urwellness.co</a>
+      </p>
+      <p class="footer-desc" style="font-size:0.78rem;">Mon–Fri: 10 AM – 6 PM &bull; Sat–Sun: Closed</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#iv-therapy">IV Therapy</a></li>
+        <li><a href="#services">Hormone Optimization</a></li>
+        <li><a href="#services">Peptide Therapy</a></li>
+        <li><a href="#softwave">SoftWave Therapy</a></li>
+        <li><a href="#services">Aesthetics &amp; Laser</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="#clarity">CLARITY&trade; Membership</a></li>
+        <li><a href="#club">Wellness Co Club</a></li>
+        <li><a href="/book.html">For Her — Coming Soon</a></li>
+        <li><a href="/book.html">For Him — Coming Soon</a></li>
+        <li><a href="/book.html">Book a Consultation</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="tel:6194443264">Call Us: (619) 444-3264</a></li>
+        <li><a href="mailto:info@urwellness.co">Email Us</a></li>
+        <li><a href="/book.html">Book Online</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 The Wellness Co Inc. All rights reserved.</span>
+    <span style="color:rgba(255,255,255,0.25);font-size:0.7rem;">Site by DRAIA</span>
+  </div>
+</footer>
+
+<script>
+// ── Nav scroll effect ──
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// ── Mobile nav toggle ──
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    navLinks.style.position = 'absolute';
+    navLinks.style.top = '72px';
+    navLinks.style.left = '0';
+    navLinks.style.right = '0';
+    navLinks.style.background = 'var(--white)';
+    navLinks.style.flexDirection = 'column';
+    navLinks.style.padding = '1.5rem 2rem';
+    navLinks.style.gap = '1rem';
+    navLinks.style.borderBottom = '1px solid var(--marble)';
+    navLinks.style.boxShadow = '0 8px 24px rgba(0,0,0,0.06)';
+  });
+}
+
+// ── Lineup horizontal scroll arrows ──
+const track = document.getElementById('lineup-track');
+const arrowL = document.getElementById('arrow-left');
+const arrowR = document.getElementById('arrow-right');
+const arrowLB = document.getElementById('arrow-left-bottom');
+const arrowRB = document.getElementById('arrow-right-bottom');
+const scrollAmt = 340;
+
+function scrollTrack(dir) {
+  track.scrollBy({ left: dir * scrollAmt, behavior: 'smooth' });
+}
+[arrowL, arrowLB].forEach(el => el.addEventListener('click', () => scrollTrack(-1)));
+[arrowR, arrowRB].forEach(el => el.addEventListener('click', () => scrollTrack(1)));
+
+// Update arrow visibility
+function updateArrows() {
+  const atStart = track.scrollLeft <= 10;
+  const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 10;
+  arrowL.classList.toggle('hidden', atStart);
+  arrowR.classList.toggle('hidden', atEnd);
+}
+track.addEventListener('scroll', updateArrows);
+window.addEventListener('resize', updateArrows);
+updateArrows();
+
+// ── Primary Services horizontal scroll arrows ──
+const pTrack = document.getElementById('primary-track');
+const pArrowL = document.getElementById('primary-arrow-left');
+const pArrowR = document.getElementById('primary-arrow-right');
+const pScrollAmt = 400;
+
+function scrollPrimary(dir) {
+  pTrack.scrollBy({ left: dir * pScrollAmt, behavior: 'smooth' });
+}
+pArrowL.addEventListener('click', () => scrollPrimary(-1));
+pArrowR.addEventListener('click', () => scrollPrimary(1));
+
+function updatePrimaryArrows() {
+  const atStart = pTrack.scrollLeft <= 10;
+  const atEnd = pTrack.scrollLeft + pTrack.clientWidth >= pTrack.scrollWidth - 10;
+  pArrowL.classList.toggle('hidden', atStart);
+  pArrowR.classList.toggle('hidden', atEnd);
+}
+pTrack.addEventListener('scroll', updatePrimaryArrows);
+window.addEventListener('resize', updatePrimaryArrows);
+updatePrimaryArrows();
+
+// ── Smooth scroll for anchor links ──
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+<!-- ═══════════════ SARA CHAT WIDGET ═══════════════ -->
+<div id="sara-widget" style="position:fixed;bottom:24px;right:24px;z-index:9999;">
+  <!-- Expanded bubble -->
+  <div id="sara-bubble" style="display:none;background:#1A1A1A;border-radius:16px;padding:1.5rem;width:280px;box-shadow:0 12px 40px rgba(0,0,0,0.25);margin-bottom:12px;animation:saraSlideUp 0.3s ease;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+      <span style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;font-weight:600;">Hi, I'm Sara</span>
+      <button onclick="document.getElementById('sara-bubble').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,0.5);font-size:1.2rem;cursor:pointer;padding:0;">&times;</button>
+    </div>
+    <p style="font-size:0.85rem;color:rgba(255,255,255,0.7);line-height:1.6;margin-bottom:1.25rem;">I'm The Wellness Co's AI assistant. I can help you book appointments, answer questions about services, or connect you with our team.</p>
+    <a href="tel:6193892405" style="display:block;text-align:center;background:#C9A96E;color:#fff;padding:0.75rem;border-radius:8px;font-weight:600;font-size:0.88rem;margin-bottom:0.5rem;text-decoration:none;">Call Sara Now</a>
+    <a href="/book.html" style="display:block;text-align:center;background:transparent;color:#C9A96E;padding:0.65rem;border-radius:8px;font-weight:600;font-size:0.85rem;border:1px solid rgba(201,169,110,0.4);text-decoration:none;">Book Online</a>
+  </div>
+  <!-- Floating button -->
+  <div onclick="var b=document.getElementById('sara-bubble');b.style.display=b.style.display==='none'?'block':'none';" style="width:60px;height:60px;border-radius:50%;background:#C9A96E;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 20px rgba(201,169,110,0.4);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.08)';this.style.boxShadow='0 6px 28px rgba(201,169,110,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(201,169,110,0.4)'">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </div>
+  <!-- Auto-fading label -->
+  <div id="sara-label" style="position:absolute;bottom:70px;right:0;background:#1A1A1A;color:#fff;font-size:0.78rem;padding:0.4rem 1rem;border-radius:8px;white-space:nowrap;box-shadow:0 4px 12px rgba(0,0,0,0.15);opacity:1;transition:opacity 0.5s;">Ready to book? 💬</div>
+</div>
+
+<style>
+@keyframes saraSlideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+<script>
+// Auto-fade Sara label after 5 seconds
+setTimeout(() => {
+  const label = document.getElementById('sara-label');
+  if (label) { label.style.opacity = '0'; setTimeout(() => label.remove(), 500); }
+}, 5000);
+</script>
+
+</body>
+</html>
