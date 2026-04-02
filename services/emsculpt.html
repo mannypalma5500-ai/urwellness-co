@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EmSculpt body contouring in Santee, San Diego. Build muscle and burn fat simultaneously with HIFEM technology. $799/session. No surgery, no downtime.">
+  <title>EmSculpt San Diego | Build Muscle & Burn Fat — The Wellness Co</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --obsidian: #1A1A1A;
+      --gold: #C9A96E;
+      --gold-hover: #B8963F;
+      --taupe: #7A6B5A;
+      --marble: #B8B0A8;
+      --linen: #F5F2EE;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--obsidian);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      padding: 1rem 2rem;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-phone {
+      color: var(--gold) !important;
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--gold), #D4AF7A);
+      color: var(--obsidian) !important;
+      padding: 0.6rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .nav-cta:hover {
+      box-shadow: 0 6px 25px rgba(201, 169, 110, 0.5);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 1rem;
+      }
+      .nav-links {
+        gap: 1rem;
+        font-size: 0.85rem;
+      }
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+      .nav-cta {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    .hero {
+      margin-top: 80px;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, var(--linen) 0%, var(--white) 100%);
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: var(--obsidian);
+      margin-bottom: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-description {
+      font-size: 1.2rem;
+      color: var(--taupe);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--obsidian);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .section-content {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .content-block {
+      background: var(--linen);
+      padding: 2rem;
+      border-radius: 4px;
+      border-left: 4px solid var(--gold);
+    }
+
+    .content-block h3 {
+      color: var(--obsidian);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .content-block p {
+      color: var(--taupe);
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .service-card {
+      background: var(--linen);
+      padding: 2rem;
+      border-radius: 4px;
+      border-top: 4px solid var(--gold);
+    }
+
+    .service-card h3 {
+      color: var(--obsidian);
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
+    }
+
+    .service-card p {
+      color: var(--taupe);
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .pricing {
+      background: var(--obsidian);
+      color: var(--white);
+      padding: 3rem 2rem;
+      margin: 3rem 0;
+      border-radius: 4px;
+    }
+
+    .pricing h3 {
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .price-item:last-child {
+      border-bottom: none;
+    }
+
+    .price-item strong {
+      color: var(--gold);
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, var(--linen) 0%, var(--white) 100%);
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, var(--gold), #D4AF7A);
+      color: var(--obsidian);
+      padding: 1rem 3rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+    }
+
+    .cta-button:hover {
+      box-shadow: 0 8px 30px rgba(201, 169, 110, 0.5);
+      transform: translateY(-3px);
+    }
+
+    .cta-text {
+      color: var(--taupe);
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: var(--obsidian);
+      color: rgba(255, 255, 255, 0.6);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    footer .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0.5rem;
+    }
+
+    footer p {
+      font-size: 0.85rem;
+      margin: 0.5rem 0;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #D4AF7A;
+    }
+
+    .location {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .copyright {
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.3);
+      margin-top: 1rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      color: var(--taupe);
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      .section h2 {
+        font-size: 2rem;
+      }
+      .hero-description {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">THE WELLNESS CO.</a>
+      <div class="nav-links">
+        <a href="/#services">Services</a>
+        <a href="/#clarity">CLARITY™</a>
+        <a href="/#softwave">SoftWave</a>
+        <a href="/#club">Club</a>
+        <a href="/#about">About</a>
+        <a href="tel:6194443264" class="nav-phone">(619) 444-3264</a>
+        <a href="/book.html" class="nav-cta">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>EmSculpt Body Contouring</h1>
+      <p class="hero-description">
+        Build muscle and burn fat simultaneously with non-invasive HIFEM technology. No surgery, no downtime. $799 per session.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Transform Your Body Without Surgery</h2>
+    <div class="section-content">
+      <div class="content-block">
+        <h3>What Is EmSculpt HIFEM Technology?</h3>
+        <p>
+          EmSculpt uses High-Intensity Focused Electromagnetic (HIFEM) energy to induce supramaximal muscle contractions. In 30 minutes, your muscles undergo the equivalent of 20,000 crunches. This leads to muscle building AND fat burning simultaneously—a rare combination.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Build Muscle & Burn Fat At the Same Time</h3>
+        <p>
+          Most body contouring treatments address fat OR muscle. EmSculpt is unique: it builds lean muscle while burning fat in the same area. The result is sculpted, defined body contours.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Zero Downtime</h3>
+        <p>
+          EmSculpt requires no recovery time. Muscle soreness is minimal. You can return to work and your normal routine immediately. Sessions take just 30 minutes.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Results Build Over Time</h3>
+        <p>
+          Most visible results appear 2-3 weeks after treatment and continue to improve for several weeks. Recommend 4 sessions scheduled 2 weeks apart for optimal results.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Treatment Areas</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Abdomen</h3>
+        <p>
+          Build abdominal muscle definition and reduce fat. Creates visible six-pack muscle definition.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Glutes</h3>
+        <p>
+          Lift and tone your glutes. Build muscle and improve shape without implants or surgery.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Arms</h3>
+        <p>
+          Tone and define your arms. Build tricep and bicep definition.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Thighs</h3>
+        <p>
+          Build muscle definition in your thighs. Reduce fat and create sculpted, toned appearance.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Calves</h3>
+        <p>
+          Define and tone your lower legs with muscle building and fat reduction.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Combination Areas</h3>
+        <p>
+          Treat multiple areas in sequence. Many clients combine abdomen + glutes for full body sculpting.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Post-Workout Enhancement</h3>
+        <p>
+          Athletes use EmSculpt to enhance muscle definition and accelerate results from their training.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Body Transformation</h3>
+        <p>
+          Combine with weight management and fitness for complete body transformation results.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Why Choose EmSculpt?</h2>
+    <div class="section-content">
+      <div class="content-block">
+        <h3>Clinically Proven Results</h3>
+        <p>
+          Multiple clinical studies show EmSculpt delivers average 16% increase in muscle mass and 19% reduction in fat. Results are measurable and significant.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Non-Invasive & Safe</h3>
+        <p>
+          No needles, no incisions, no anesthesia. EmSculpt is FDA-cleared and safe for all body types.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Integrates With Your Fitness</h3>
+        <p>
+          EmSculpt complements your existing fitness routine. Use it to accelerate results or to target areas resistant to training.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Wellness Co Club Members Save 10%</h3>
+        <p>
+          Make EmSculpt part of your body contouring program and enjoy member pricing on all sessions.
+        </p>
+      </div>
+    </div>
+
+    <div class="pricing">
+      <h3>EmSculpt Pricing</h3>
+      <div class="price-item">
+        <span>Single Session (1 Area)</span>
+        <strong>$799</strong>
+      </div>
+      <div class="price-item">
+        <span>4-Session Package (1 Area)</span>
+        <strong>$2,800 ($700 per session)</strong>
+      </div>
+      <div class="price-item">
+        <span>Dual Area Session (Abdomen + Glutes)</span>
+        <strong>$1,298</strong>
+      </div>
+      <div class="price-item">
+        <span>4-Session Dual Area Package</span>
+        <strong>$4,400 ($1,100 per session)</strong>
+      </div>
+      <div class="price-item">
+        <span>Wellness Co Club Member Pricing</span>
+        <strong>Save 10% on All Sessions</strong>
+      </div>
+      <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(255, 255, 255, 0.7);">
+        Recommended protocol: 4 sessions scheduled 2 weeks apart for optimal muscle building and fat reduction. Maintenance sessions every 3-6 months sustain your results.
+      </p>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2 style="margin-bottom: 2rem;">Sculpt Your Ideal Body</h2>
+    <a href="/book.html?service=aesthetics" class="cta-button">Book Your EmSculpt Session</a>
+    <p class="cta-text">Schedule your body contouring consultation in Santee, San Diego. Zero downtime, real results.</p>
+  </section>
+
+  <footer>
+    <div class="brand">THE WELLNESS CO.</div>
+    <p>Clinical Wellness & Med Spa</p>
+    <p>Santee, San Diego</p>
+    <p>
+      <a href="tel:6194443264">(619) 444-3264</a> • <a href="mailto:info@urwellness.co">info@urwellness.co</a>
+    </p>
+    <p class="location">9658 Mission Gorge Rd, Santee, CA 92071</p>
+    <div class="copyright">
+      &copy; 2026 The Wellness Co Inc. All rights reserved. • <a href="https://draia.ai" target="_blank" rel="noopener">Site by DRAIA</a>
+    </div>
+  </footer>
+</body>
+</html>

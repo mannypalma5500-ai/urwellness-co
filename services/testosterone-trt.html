@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Medically supervised TRT in Santee, San Diego. Restore testosterone levels, energy, muscle, and drive with personalized protocols guided by comprehensive labs.">
+  <title>Testosterone Replacement Therapy San Diego | TRT for Men — The Wellness Co</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --obsidian: #1A1A1A;
+      --gold: #C9A96E;
+      --gold-hover: #B8963F;
+      --taupe: #7A6B5A;
+      --marble: #B8B0A8;
+      --linen: #F5F2EE;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--obsidian);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      padding: 1rem 2rem;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-phone {
+      color: var(--gold) !important;
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--gold), #D4AF7A);
+      color: var(--obsidian) !important;
+      padding: 0.6rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .nav-cta:hover {
+      box-shadow: 0 6px 25px rgba(201, 169, 110, 0.5);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 1rem;
+      }
+      .nav-links {
+        gap: 1rem;
+        font-size: 0.85rem;
+      }
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+      .nav-cta {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    .hero {
+      margin-top: 80px;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, var(--linen) 0%, var(--white) 100%);
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: var(--obsidian);
+      margin-bottom: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-description {
+      font-size: 1.2rem;
+      color: var(--taupe);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--obsidian);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .section-content {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .content-block {
+      background: var(--linen);
+      padding: 2rem;
+      border-radius: 4px;
+      border-left: 4px solid var(--gold);
+    }
+
+    .content-block h3 {
+      color: var(--obsidian);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .content-block p {
+      color: var(--taupe);
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .service-card {
+      background: var(--linen);
+      padding: 2rem;
+      border-radius: 4px;
+      border-top: 4px solid var(--gold);
+    }
+
+    .service-card h3 {
+      color: var(--obsidian);
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
+    }
+
+    .service-card p {
+      color: var(--taupe);
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .pricing {
+      background: var(--obsidian);
+      color: var(--white);
+      padding: 3rem 2rem;
+      margin: 3rem 0;
+      border-radius: 4px;
+    }
+
+    .pricing h3 {
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .price-item:last-child {
+      border-bottom: none;
+    }
+
+    .price-item strong {
+      color: var(--gold);
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, var(--linen) 0%, var(--white) 100%);
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, var(--gold), #D4AF7A);
+      color: var(--obsidian);
+      padding: 1rem 3rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+    }
+
+    .cta-button:hover {
+      box-shadow: 0 8px 30px rgba(201, 169, 110, 0.5);
+      transform: translateY(-3px);
+    }
+
+    .cta-text {
+      color: var(--taupe);
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: var(--obsidian);
+      color: rgba(255, 255, 255, 0.6);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    footer .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0.5rem;
+    }
+
+    footer p {
+      font-size: 0.85rem;
+      margin: 0.5rem 0;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #D4AF7A;
+    }
+
+    .location {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .copyright {
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.3);
+      margin-top: 1rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      color: var(--taupe);
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      .section h2 {
+        font-size: 2rem;
+      }
+      .hero-description {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">THE WELLNESS CO.</a>
+      <div class="nav-links">
+        <a href="/#services">Services</a>
+        <a href="/#clarity">CLARITY™</a>
+        <a href="/#softwave">SoftWave</a>
+        <a href="/#club">Club</a>
+        <a href="/#about">About</a>
+        <a href="tel:6194443264" class="nav-phone">(619) 444-3264</a>
+        <a href="/book.html" class="nav-cta">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Testosterone Replacement Therapy</h1>
+      <p class="hero-description">
+        Medically supervised TRT designed to restore energy, muscle, drive, and vitality through personalized hormone protocols.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Restore Your Strength & Drive</h2>
+    <div class="section-content">
+      <div class="content-block">
+        <h3>Low Testosterone Symptoms</h3>
+        <p>
+          Low energy, reduced libido, brain fog, muscle loss, mood changes, and decreased motivation are hallmarks of low testosterone. TRT restores vitality and masculine wellness naturally.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Lab-Guided Protocols</h3>
+        <p>
+          We measure total testosterone, free testosterone, and related hormones to create a personalized replacement plan. Comprehensive labs guide dosing and ensure safety throughout your protocol.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Multiple Delivery Options</h3>
+        <p>
+          Injections, pellets, or topicals—we offer multiple TRT delivery methods. Your preferences and lifestyle determine the best approach for consistent, effective hormone optimization.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>CLARITY™ ELITE Membership</h3>
+        <p>
+          All male TRT protocols are included in our CLARITY™ ELITE membership ($599/month). This includes comprehensive labs, all hormones, and ongoing clinical oversight by Dawn Philp, FNP.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>What TRT Restores</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Energy & Vitality</h3>
+        <p>
+          Low testosterone drains motivation and energy. TRT restores your drive and ability to tackle the day with vigor.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Muscle Mass & Strength</h3>
+        <p>
+          Testosterone is essential for muscle building and recovery. TRT helps maintain and build lean muscle, especially with proper training.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Sexual Function & Libido</h3>
+        <p>
+          Low T significantly reduces sexual desire and performance. TRT restores libido, erectile function, and sexual satisfaction.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Mood & Confidence</h3>
+        <p>
+          Testosterone influences confidence, assertiveness, and emotional stability. Proper levels restore psychological well-being.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Cognitive Function</h3>
+        <p>
+          Brain fog and poor concentration improve with adequate testosterone. Mental clarity and focus return.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Metabolic Health</h3>
+        <p>
+          Testosterone supports healthy body composition, insulin sensitivity, and metabolic function.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Bone Density</h3>
+        <p>
+          Testosterone protects skeletal strength. TRT prevents osteoporosis and maintains bone health.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Sleep Quality</h3>
+        <p>
+          Proper testosterone levels support restful sleep and recovery.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Why Choose CLARITY™ TRT?</h2>
+    <div class="section-content">
+      <div class="content-block">
+        <h3>Medical Expertise & Personalization</h3>
+        <p>
+          Dawn Philp, FNP brings extensive experience in men's hormone health. Every TRT protocol is personalized to your labs, goals, and symptoms—not a cookie-cutter approach.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Comprehensive Lab Monitoring</h3>
+        <p>
+          Initial labs establish your testosterone baseline. Ongoing monitoring ensures optimal dosing, safety, and symptom resolution throughout your TRT journey.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Multiple Delivery Methods</h3>
+        <p>
+          Whether you prefer injections, pellets, or topical testosterone, we support your preferred delivery method. CLARITY™ ELITE ($599/month) includes all delivery options.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Ongoing Clinical Oversight</h3>
+        <p>
+          TRT requires vigilant monitoring. We track your response, adjust dosing as needed, and ensure you achieve optimal results with minimal side effects.
+        </p>
+      </div>
+    </div>
+
+    <div class="pricing">
+      <h3>Testosterone TRT Pricing</h3>
+      <div class="price-item">
+        <span>CLARITY™ ELITE Monthly Membership</span>
+        <strong>$599/month</strong>
+      </div>
+      <div class="price-item">
+        <span>Includes: All Testosterone Delivery Options</span>
+        <strong>Injections, Pellets, or Topical</strong>
+      </div>
+      <div class="price-item">
+        <span>Includes: Comprehensive Labs</span>
+        <strong>Initial & Ongoing Monitoring</strong>
+      </div>
+      <div class="price-item">
+        <span>Includes: Clinical Oversight</span>
+        <strong>By Dawn Philp, FNP</strong>
+      </div>
+      <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(255, 255, 255, 0.7);">
+        CLARITY™ ELITE is our comprehensive hormone optimization membership. Testosterone replacement therapy is one component of complete male hormone health. Labs guide every decision. No surprises, no hidden costs.
+      </p>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2 style="margin-bottom: 2rem;">Reclaim Your Power</h2>
+    <a href="/book.html?service=hormones-him" class="cta-button">Book Your Free CLARITY™ Consultation</a>
+    <p class="cta-text">Let's create your personalized testosterone replacement protocol. Available in Santee, San Diego.</p>
+  </section>
+
+  <footer>
+    <div class="brand">THE WELLNESS CO.</div>
+    <p>Clinical Wellness & Med Spa</p>
+    <p>Santee, San Diego</p>
+    <p>
+      <a href="tel:6194443264">(619) 444-3264</a> • <a href="mailto:info@urwellness.co">info@urwellness.co</a>
+    </p>
+    <p class="location">9658 Mission Gorge Rd, Santee, CA 92071</p>
+    <div class="copyright">
+      &copy; 2026 The Wellness Co Inc. All rights reserved. • <a href="https://draia.ai" target="_blank" rel="noopener">Site by DRAIA</a>
+    </div>
+  </footer>
+</body>
+</html>
