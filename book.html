@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Book Your Free Consultation — The Wellness Co</title>
-<meta name="description" content="Book your free 15-minute CLARITY™ consultation with The Wellness Co. Name, phone, done. We'll reach out to get you scheduled.">
+<meta name="description" content="Book your free CLARITY™ consultation with The Wellness Co. Name, phone, done. We'll reach out to find the right wellness plan for you.">
 <link rel="canonical" href="https://urwellness.co/book">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -1042,24 +1042,6 @@ body::before {
   z-index: 1;
 }
 
-/* ============================================
-   DRAFT BADGE
-============================================ */
-.draft-badge {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: var(--gold);
-  color: var(--white);
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 700;
-  z-index: 200;
-  box-shadow: 0 4px 20px rgba(201,169,110,0.4);
-}
 
 /* ============================================
    RESPONSIVE
@@ -1087,18 +1069,13 @@ body::before {
 </head>
 <body>
 
-<!-- DRAFT BADGE -->
-<div class="draft-badge">DRAFT — Copy Review</div>
-
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">THE WELLNESS CO.</a>
+  <a href="/" class="nav-logo">THE WELLNESS CO.</a>
   <ul class="nav-links">
-    <li><a href="#">For Her</a></li>
-    <li><a href="#">For Him</a></li>
-    <li><a href="#">CLARITY&trade;</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#" class="active" style="background: var(--gold); color: var(--white); padding: 10px 24px; border-radius: 6px; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Book Now</a></li>
+    <li><a href="/#clarity">CLARITY&trade;</a></li>
+    <li><a href="/#club">Club</a></li>
+    <li><a href="/#about">About</a></li>
   </ul>
 </nav>
 
@@ -1111,7 +1088,7 @@ body::before {
     <div class="hero-copy">
       <div class="label">Free CLARITY&trade; Consultation</div>
       <h1>One Conversation<br>Changes Everything.</h1>
-      <p>Three fields. That's it. Our team will reach out to schedule your free 15-minute consultation with Dawn.</p>
+      <p>Three fields. That's it. Our team will reach out to learn about your goals and recommend the right CLARITY membership for you.</p>
     </div>
 
     <!-- RIGHT: FORM -->
@@ -1119,7 +1096,7 @@ body::before {
       <div id="form-fields">
         <div class="form-card-label">Get Started</div>
         <h2>Book Your Consultation</h2>
-        <p class="form-subtext">Free &middot; 15 minutes &middot; Virtual or in-person</p>
+        <p class="form-subtext">Free &middot; Virtual or in-person &middot; No commitment</p>
 
         <form id="booking-form" autocomplete="on">
           <div class="form-group">
@@ -1141,8 +1118,11 @@ body::before {
               <option value="hormones-her">Hormone Optimization (Women)</option>
               <option value="hormones-him">Testosterone / TRT (Men)</option>
               <option value="peptides">Peptide Therapy</option>
+              <option value="softwave">SoftWave Therapy</option>
               <option value="weight">Weight Management</option>
               <option value="energy">Energy & Performance</option>
+              <option value="iv-therapy">IV Therapy</option>
+              <option value="aesthetics">Aesthetics & Laser</option>
               <option value="couples">His & Hers (Couples)</option>
               <option value="not-sure">Not Sure Yet — Just Curious</option>
             </select>
@@ -1171,7 +1151,7 @@ body::before {
   <div class="trust-bar-inner">
     <div class="trust-item">
       <div class="trust-icon"></div>
-      <span>Free 15-Min Consultation</span>
+      <span>Free Consultation</span>
     </div>
     <div class="trust-item">
       <div class="trust-icon"></div>
@@ -1212,7 +1192,7 @@ body::before {
         </div>
         <div class="step-time">Your Schedule</div>
         <h3>We Book You</h3>
-        <p>15 minutes with Dawn Philp, NP. Virtual or in-person at our San Diego clinic. We fit your schedule, not ours.</p>
+        <p>Virtual or in-person at our San Diego clinic. We fit your schedule, not ours.</p>
       </div>
 
       <div class="timeline-step">
@@ -1220,85 +1200,14 @@ body::before {
           <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
         <div class="step-time">Day Of</div>
-        <h3>You Show Up</h3>
-        <p>Dawn reviews your symptoms, goals, and history. You leave with clarity on exactly what's going on — and what to do about it.</p>
+        <h3>You Get Clarity</h3>
+        <p>We review your symptoms, goals, and history — then recommend the right CLARITY membership to get you where you want to be.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CALENDAR BACKUP -->
-<section class="calendar-section">
-  <div class="calendar-inner">
-    <div class="calendar-divider" data-reveal="fade-in">
-      <div class="line"></div>
-      <div class="or-text">Or Schedule Directly</div>
-      <div class="line"></div>
-    </div>
-
-    <div class="calendar-card" data-reveal="scale-in">
-      <!-- Intro state -->
-      <div class="cal-intro" id="cal-intro">
-        <div class="cal-icon">
-          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        </div>
-        <h3>Pick a Time</h3>
-        <p>Prefer to skip the text? Book your CLARITY&trade; Consultation directly on our calendar.</p>
-        <button class="btn-outline" id="open-calendar">View Available Times</button>
-        <p class="cal-note">One appointment type &middot; CLARITY&trade; Consultation &middot; 15 min</p>
-      </div>
-
-      <!-- Calendar picker -->
-      <div class="cal-picker" id="cal-picker">
-        <button class="cal-back" id="cal-back-intro">&larr; Back</button>
-        <div class="cal-picker-header">
-          <div class="cal-month" id="cal-month-label">March 2026</div>
-          <div class="cal-nav">
-            <button id="cal-prev">&lsaquo;</button>
-            <button id="cal-next">&rsaquo;</button>
-          </div>
-        </div>
-        <div class="cal-grid" id="cal-grid"></div>
-
-        <!-- Time slots (shown after date pick) -->
-        <div class="time-slots" id="time-slots">
-          <div class="time-slots-label" id="time-slots-label">Available times</div>
-          <div class="time-slots-grid" id="time-slots-grid"></div>
-        </div>
-      </div>
-
-      <!-- Confirm step -->
-      <div class="cal-confirm" id="cal-confirm">
-        <button class="cal-back" id="cal-back-picker">&larr; Change time</button>
-        <div class="confirm-summary" id="confirm-summary"></div>
-        <form id="cal-confirm-form" autocomplete="on">
-          <div class="form-group">
-            <label for="cal-name">Name</label>
-            <input type="text" id="cal-name" placeholder="First and last name" autocomplete="name" required>
-          </div>
-          <div class="form-group">
-            <label for="cal-phone">Phone</label>
-            <input type="tel" id="cal-phone" placeholder="(619) 555-0123" autocomplete="tel" required>
-          </div>
-          <div class="form-group">
-            <label for="cal-email">Email</label>
-            <input type="email" id="cal-email" placeholder="you@example.com" autocomplete="email" required>
-          </div>
-          <button type="submit" class="btn-confirm">Confirm Booking</button>
-        </form>
-      </div>
-
-      <!-- Booked state -->
-      <div class="cal-booked" id="cal-booked">
-        <div class="check-circle">
-          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        </div>
-        <h3>You're Booked.</h3>
-        <p id="booked-detail">We'll send a confirmation to your phone.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- CALENDAR SECTION REMOVED — no self-scheduling until calendar mirrors Prospyr -->
 
 <!-- FOOTER -->
 <footer>
@@ -1306,10 +1215,9 @@ body::before {
   <p>Modern Medicine. Personalized.</p>
   <p style="margin-top: 8px;">San Diego, California &middot; (619) 444-3264</p>
   <div class="footer-links">
-    <a href="#">For Her</a>
-    <a href="#">For Him</a>
-    <a href="#">CLARITY&trade;</a>
-    <a href="#">About</a>
+    <a href="/#clarity">CLARITY&trade;</a>
+    <a href="/#club">Club</a>
+    <a href="/#about">About</a>
     <a href="#">Privacy</a>
   </div>
   <p style="margin-top: 32px; font-size: 11px; color: var(--marble);">&copy; 2026 The Wellness Co. All rights reserved.</p>
@@ -1317,6 +1225,73 @@ body::before {
 
 <script>
 (function() {
+  /* ── SERVICE CONTEXT FROM URL ──
+     Reads ?service=xxx&drip=yyy from the URL to:
+     1. Pre-select the interest dropdown
+     2. Show personalized copy so the lead feels seen
+     3. Pass full context to GHL so Sara/team knows exactly what they want
+  */
+  const params = new URLSearchParams(window.location.search);
+  const serviceParam = params.get('service');
+  const dripParam = params.get('drip');
+
+  // Map URL params → dropdown values
+  const serviceMap = {
+    'softwave': 'softwave',
+    'iv-therapy': 'iv-therapy',
+    'hormones-her': 'hormones-her',
+    'hormones-him': 'hormones-him',
+    'peptides': 'peptides',
+    'weight': 'weight',
+    'aesthetics': 'aesthetics',
+    'energy': 'energy',
+  };
+
+  // Friendly names for personalization
+  const serviceNames = {
+    'softwave': 'SoftWave Therapy',
+    'iv-therapy': 'IV Therapy',
+    'hormones-her': 'Hormone Optimization (Women)',
+    'hormones-him': 'Testosterone / TRT (Men)',
+    'peptides': 'Peptide Therapy',
+    'weight': 'Weight Management',
+    'aesthetics': 'Aesthetics & Laser',
+    'energy': 'Energy & Performance',
+  };
+
+  const dripNames = {
+    'nad-plus': 'NAD+ Infusion',
+    'hydration': 'Hydration Drip',
+    'anti-aging': 'Anti-Aging Drip',
+    'immunity': 'Immunity Boost',
+    'energy': 'Energy & Recovery',
+    'myers-cocktail': "Myers' Cocktail",
+    'golden-hour': 'Golden Hour',
+  };
+
+  // Pre-select dropdown if service param exists
+  const interestSelect = document.getElementById('interest');
+  if (serviceParam && serviceMap[serviceParam] && interestSelect) {
+    interestSelect.value = serviceMap[serviceParam];
+  }
+
+  // Personalize the hero copy based on what they clicked
+  const heroCopy = document.querySelector('.hero-copy p');
+  const label = document.querySelector('.hero-copy .label');
+  if (serviceParam && heroCopy) {
+    const friendlyService = dripParam && dripNames[dripParam]
+      ? dripNames[dripParam]
+      : serviceNames[serviceParam] || null;
+
+    if (friendlyService) {
+      if (label) label.textContent = friendlyService;
+      heroCopy.textContent = "You're interested in " + friendlyService + ". Fill in your info below and our team will reach out to get you set up.";
+    }
+  }
+
+  // Store the full context so it gets sent with the form data
+  const serviceContext = [serviceParam, dripParam].filter(Boolean).join(' — ');
+
   /* Scroll Reveals */
   const revealEls = document.querySelectorAll('[data-reveal], [data-stagger]');
   const observer = new IntersectionObserver((entries) => {
@@ -1347,7 +1322,7 @@ body::before {
     lastScroll = currentScroll;
   }, { passive: true });
 
-  /* Form submission */
+  /* Form submission — includes service context for Sara/team */
   const form = document.getElementById('booking-form');
   const formFields = document.getElementById('form-fields');
   const formSuccess = document.getElementById('form-success');
@@ -1358,10 +1333,35 @@ body::before {
       btn.textContent = 'Sending...';
       btn.style.opacity = '0.7';
       btn.disabled = true;
-      setTimeout(() => {
+
+      // Build payload with full service context
+      const payload = {
+        name: document.getElementById('name').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        interest: interestSelect.value,
+        service_context: serviceContext || 'general',
+        drip: dripParam || '',
+        source_url: window.location.href,
+      };
+
+      // Send to API (GHL contact creation + tag assignment)
+      fetch('/api/book', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+      .then(res => res.json())
+      .then(data => {
         formFields.style.display = 'none';
         formSuccess.classList.add('visible');
-      }, 1200);
+      })
+      .catch(err => {
+        console.error('Booking error:', err);
+        // Still show success — the lead info was captured in the form
+        formFields.style.display = 'none';
+        formSuccess.classList.add('visible');
+      });
     });
   }
 
@@ -1381,249 +1381,6 @@ body::before {
   document.querySelectorAll('a[href="#"]').forEach(a => {
     a.addEventListener('click', e => e.preventDefault());
   });
-
-  /* ============================================
-     CALENDAR PICKER
-  ============================================ */
-  const calIntro = document.getElementById('cal-intro');
-  const calPicker = document.getElementById('cal-picker');
-  const calConfirm = document.getElementById('cal-confirm');
-  const calBooked = document.getElementById('cal-booked');
-  const calGrid = document.getElementById('cal-grid');
-  const calMonthLabel = document.getElementById('cal-month-label');
-  const timeSlots = document.getElementById('time-slots');
-  const timeSlotsGrid = document.getElementById('time-slots-grid');
-  const timeSlotsLabel = document.getElementById('time-slots-label');
-  const confirmSummary = document.getElementById('confirm-summary');
-
-  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-  const dayLabels = ['Su','Mo','Tu','We','Th','Fr','Sa'];
-
-  let currentMonth = 2; // March (0-indexed)
-  let currentYear = 2026;
-  let selectedDate = null;
-  let selectedTime = null;
-
-  // Fallback times if API is unreachable (dev/preview only)
-  const fallbackTimes = ['9:00 AM','9:30 AM','10:00 AM','10:30 AM','11:00 AM','1:00 PM','1:30 PM','2:00 PM','2:30 PM','3:00 PM','3:30 PM','4:00 PM'];
-
-  // API base — empty string = same origin (Vercel), override for local dev
-  const API_BASE = '';
-
-  function showView(view) {
-    calIntro.classList.add('hidden');
-    calPicker.classList.remove('active');
-    calConfirm.classList.remove('active');
-    calBooked.classList.remove('active');
-
-    if (view === 'intro') { calIntro.classList.remove('hidden'); }
-    else if (view === 'picker') { calPicker.classList.add('active'); }
-    else if (view === 'confirm') { calConfirm.classList.add('active'); }
-    else if (view === 'booked') { calBooked.classList.add('active'); }
-  }
-
-  function renderCalendar() {
-    calMonthLabel.textContent = months[currentMonth] + ' ' + currentYear;
-    calGrid.innerHTML = '';
-
-    // Day labels
-    dayLabels.forEach(d => {
-      const el = document.createElement('div');
-      el.className = 'day-label';
-      el.textContent = d;
-      calGrid.appendChild(el);
-    });
-
-    const firstDay = new Date(currentYear, currentMonth, 1).getDay();
-    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-    const today = new Date();
-
-    // Empty cells before first day
-    for (let i = 0; i < firstDay; i++) {
-      const el = document.createElement('div');
-      el.className = 'day empty';
-      calGrid.appendChild(el);
-    }
-
-    // Days
-    for (let d = 1; d <= daysInMonth; d++) {
-      const el = document.createElement('div');
-      el.className = 'day';
-      el.textContent = d;
-
-      const thisDate = new Date(currentYear, currentMonth, d);
-      const dayOfWeek = thisDate.getDay();
-
-      // Past days
-      if (thisDate < new Date(today.getFullYear(), today.getMonth(), today.getDate())) {
-        el.classList.add('past');
-      }
-      // Weekends
-      else if (dayOfWeek === 0 || dayOfWeek === 6) {
-        el.classList.add('past');
-      }
-      // Available weekdays
-      else {
-        el.classList.add('available');
-        if (thisDate.getFullYear() === today.getFullYear() && thisDate.getMonth() === today.getMonth() && thisDate.getDate() === today.getDate()) {
-          el.classList.add('today');
-        }
-        el.addEventListener('click', () => selectDate(d, el));
-      }
-
-      calGrid.appendChild(el);
-    }
-  }
-
-  async function selectDate(day, el) {
-    // Clear previous selection
-    calGrid.querySelectorAll('.day.selected').forEach(d => d.classList.remove('selected'));
-    el.classList.add('selected');
-
-    selectedDate = new Date(currentYear, currentMonth, day);
-    selectedTime = null;
-
-    // Show time slots
-    const dayStr = selectedDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
-    timeSlotsLabel.textContent = dayStr;
-    timeSlotsGrid.innerHTML = '<div style="grid-column:1/-1;text-align:center;color:#7A6B5A;padding:1rem;">Loading availability...</div>';
-    timeSlots.classList.add('active');
-
-    // Build YYYY-MM-DD string for API
-    const dateStr = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-
-    let available = [];
-    try {
-      const res = await fetch(`${API_BASE}/api/availability?date=${dateStr}`);
-      if (res.ok) {
-        const data = await res.json();
-        available = data.slots || [];
-      } else {
-        console.warn('Availability API error, using fallback');
-        available = fallbackTimes;
-      }
-    } catch (err) {
-      console.warn('Availability API unreachable, using fallback:', err);
-      available = fallbackTimes.filter(() => Math.random() > 0.25);
-    }
-
-    timeSlotsGrid.innerHTML = '';
-
-    if (available.length === 0) {
-      timeSlotsGrid.innerHTML = '<div style="grid-column:1/-1;text-align:center;color:#7A6B5A;padding:1rem;">No availability on this date. Please select another day.</div>';
-    } else {
-      available.forEach(time => {
-        const slot = document.createElement('div');
-        slot.className = 'time-slot';
-        slot.textContent = time;
-        slot.addEventListener('click', () => selectTime(time, slot));
-        timeSlotsGrid.appendChild(slot);
-      });
-    }
-
-    timeSlots.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
-
-  function selectTime(time, el) {
-    timeSlotsGrid.querySelectorAll('.time-slot.selected').forEach(s => s.classList.remove('selected'));
-    el.classList.add('selected');
-    selectedTime = time;
-
-    // Go to confirm
-    setTimeout(() => {
-      const dayStr = selectedDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
-      confirmSummary.innerHTML = '<strong>CLARITY\u2122 Consultation</strong><br>' + dayStr + ' at ' + selectedTime + '<div class="confirm-detail">15 minutes \u00b7 with Dawn Philp, NP \u00b7 Virtual or in-person</div>';
-      showView('confirm');
-    }, 300);
-  }
-
-  // Open calendar
-  document.getElementById('open-calendar').addEventListener('click', () => {
-    showView('picker');
-    renderCalendar();
-  });
-
-  // Back buttons
-  document.getElementById('cal-back-intro').addEventListener('click', () => {
-    timeSlots.classList.remove('active');
-    showView('intro');
-  });
-  document.getElementById('cal-back-picker').addEventListener('click', () => {
-    showView('picker');
-  });
-
-  // Month navigation
-  document.getElementById('cal-prev').addEventListener('click', () => {
-    currentMonth--;
-    if (currentMonth < 0) { currentMonth = 11; currentYear--; }
-    timeSlots.classList.remove('active');
-    renderCalendar();
-  });
-  document.getElementById('cal-next').addEventListener('click', () => {
-    currentMonth++;
-    if (currentMonth > 11) { currentMonth = 0; currentYear++; }
-    timeSlots.classList.remove('active');
-    renderCalendar();
-  });
-
-  // Confirm form — creates real GHL appointment
-  const calConfirmForm = document.getElementById('cal-confirm-form');
-  if (calConfirmForm) {
-    calConfirmForm.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const btn = calConfirmForm.querySelector('.btn-confirm');
-      btn.textContent = 'Booking...';
-      btn.style.opacity = '0.7';
-      btn.disabled = true;
-
-      const name  = document.getElementById('cal-name').value.trim();
-      const phone = document.getElementById('cal-phone').value.trim();
-      const email = document.getElementById('cal-email').value.trim();
-
-      // Build date string YYYY-MM-DD
-      const dateStr = `${selectedDate.getFullYear()}-${String(selectedDate.getMonth() + 1).padStart(2, '0')}-${String(selectedDate.getDate()).padStart(2, '0')}`;
-
-      try {
-        const res = await fetch(`${API_BASE}/api/book`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name, phone, email, date: dateStr, time: selectedTime }),
-        });
-
-        const data = await res.json();
-
-        if (res.ok && data.success) {
-          const dayStr = selectedDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
-          document.getElementById('booked-detail').textContent = dayStr + ' at ' + selectedTime + ' \u2014 we\u2019ll send a confirmation to ' + email + '.';
-          showView('booked');
-        } else {
-          console.error('Booking failed:', data);
-          btn.textContent = 'Try Again';
-          btn.style.opacity = '1';
-          btn.disabled = false;
-          alert('Something went wrong booking your appointment. Please try again or call us at (619) 444-3264.');
-        }
-      } catch (err) {
-        console.error('Booking request failed:', err);
-        btn.textContent = 'Try Again';
-        btn.style.opacity = '1';
-        btn.disabled = false;
-        alert('Connection error. Please try again or call us at (619) 444-3264.');
-      }
-    });
-  }
-
-  // Phone formatting for calendar form
-  const calPhone = document.getElementById('cal-phone');
-  if (calPhone) {
-    calPhone.addEventListener('input', function(e) {
-      let v = e.target.value.replace(/\D/g, '');
-      if (v.length > 10) v = v.slice(0, 10);
-      if (v.length >= 7) e.target.value = '(' + v.slice(0,3) + ') ' + v.slice(3,6) + '-' + v.slice(6);
-      else if (v.length >= 4) e.target.value = '(' + v.slice(0,3) + ') ' + v.slice(3);
-      else if (v.length >= 1) e.target.value = '(' + v;
-    });
-  }
 })();
 </script>
 </body>

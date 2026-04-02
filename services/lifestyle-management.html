@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lifestyle and wellness management in San Diego. Clinically guided nutrition, stress, sleep, and longevity protocols at The Wellness Co.">
+  <title>Lifestyle & Wellness Management San Diego — The Wellness Co</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --obsidian: #1A1A1A;
+      --gold: #C9A96E;
+      --gold-hover: #B8963F;
+      --taupe: #7A6B5A;
+      --marble: #B8B0A8;
+      --linen: #F5F2EE;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--obsidian);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      padding: 1rem 2rem;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-phone {
+      color: var(--gold) !important;
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--gold), #D4AF7A);
+      color: var(--obsidian) !important;
+      padding: 0.6rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .nav-cta:hover {
+      box-shadow: 0 6px 25px rgba(201, 169, 110, 0.5);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 1rem;
+      }
+      .nav-links {
+        gap: 1rem;
+        font-size: 0.85rem;
+      }
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+      .nav-cta {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    .hero {
+      margin-top: 80px;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, var(--linen) 0%, var(--white) 100%);
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: var(--obsidian);
+      margin-bottom: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-description {
+      font-size: 1.2rem;
+      color: var(--taupe);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--obsidian);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .section-content {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .content-block {
+      background: var(--linen);
+      padding: 2rem;
+      border-radius: 4px;
+      border-left: 4px solid var(--gold);
+    }
+
+    .content-block h3 {
+      color: var(--obsidian);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .content-block p {
+      color: var(--taupe);
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .pillar-card {
+      background: var(--linen);
+      padding: 2rem;
+      border-radius: 4px;
+      border-top: 4px solid var(--gold);
+    }
+
+    .pillar-card h3 {
+      color: var(--obsidian);
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
+    }
+
+    .pillar-card p {
+      color: var(--taupe);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .pricing {
+      background: var(--obsidian);
+      color: var(--white);
+      padding: 3rem 2rem;
+      margin: 3rem 0;
+      border-radius: 4px;
+    }
+
+    .pricing h3 {
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .price-item:last-child {
+      border-bottom: none;
+    }
+
+    .price-item strong {
+      color: var(--gold);
+    }
+
+    .highlight {
+      background: rgba(201, 169, 110, 0.1);
+      padding: 1.5rem;
+      border-radius: 4px;
+      border-left: 4px solid var(--gold);
+      margin: 2rem 0;
+      color: var(--taupe);
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, var(--linen) 0%, var(--white) 100%);
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, var(--gold), #D4AF7A);
+      color: var(--obsidian);
+      padding: 1rem 3rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+    }
+
+    .cta-button:hover {
+      box-shadow: 0 8px 30px rgba(201, 169, 110, 0.5);
+      transform: translateY(-3px);
+    }
+
+    .cta-text {
+      color: var(--taupe);
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: var(--obsidian);
+      color: rgba(255, 255, 255, 0.6);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    footer .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0.5rem;
+    }
+
+    footer p {
+      font-size: 0.85rem;
+      margin: 0.5rem 0;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #D4AF7A;
+    }
+
+    .location {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .copyright {
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.3);
+      margin-top: 1rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      color: var(--taupe);
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      .section h2 {
+        font-size: 2rem;
+      }
+      .hero-description {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">THE WELLNESS CO.</a>
+      <div class="nav-links">
+        <a href="/#services">Services</a>
+        <a href="/#clarity">CLARITY™</a>
+        <a href="/#softwave">SoftWave</a>
+        <a href="/#club">Club</a>
+        <a href="/#about">About</a>
+        <a href="tel:6194443264" class="nav-phone">(619) 444-3264</a>
+        <a href="/book.html" class="nav-cta">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Lifestyle & Wellness Management</h1>
+      <p class="hero-description">
+        Comprehensive, data-driven wellness protocols. Optimize nutrition, stress, sleep, and longevity through clinical guidance and personalized action.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>What to Expect</h2>
+    <div class="section-content">
+      <div class="content-block">
+        <h3>Holistic Wellness Assessment</h3>
+        <p>
+          We don't just treat symptoms—we assess your entire lifestyle. Sleep patterns, stress response, nutrition, movement, social connection, and purpose. This comprehensive view reveals the root causes of health challenges and the pathway to transformation.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Data-Driven Protocols</h3>
+        <p>
+          Lab work, biomarkers, lifestyle tracking, and biometric data guide every recommendation. We measure what matters and adjust protocols based on real results, not guesswork.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Personalized Action Plans</h3>
+        <p>
+          Your protocol is designed for your life—not a generic template. We integrate nutrition, stress management, sleep optimization, movement, and supplementation in a way that fits your schedule and goals.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Ongoing Partnership</h3>
+        <p>
+          Lifestyle change requires consistency and accountability. We're with you throughout your journey, adjusting protocols, celebrating wins, and supporting you through challenges.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>The Five Pillars of Wellness</h2>
+    <div class="pillar-grid">
+      <div class="pillar-card">
+        <h3>Nutrition</h3>
+        <p>
+          Personalized meal planning based on your metabolic profile, food preferences, and health goals. Food as medicine, not restriction.
+        </p>
+      </div>
+
+      <div class="pillar-card">
+        <h3>Sleep Optimization</h3>
+        <p>
+          Sleep is foundational to wellness. We optimize sleep quality, duration, and circadian rhythm for recovery and peak performance.
+        </p>
+      </div>
+
+      <div class="pillar-card">
+        <h3>Stress Management</h3>
+        <p>
+          Chronic stress undermines everything. We teach stress resilience techniques and create protocols that lower cortisol and nervous system activation.
+        </p>
+      </div>
+
+      <div class="pillar-card">
+        <h3>Movement & Exercise</h3>
+        <p>
+          Strength, mobility, cardiovascular health, and joy. Movement protocols tailored to your body and goals.
+        </p>
+      </div>
+
+      <div class="pillar-card">
+        <h3>Longevity Markers</h3>
+        <p>
+          Beyond feeling good—we optimize biological markers of aging. Cellular health, inflammation, metabolic function, and regeneration.
+        </p>
+      </div>
+
+      <div class="pillar-card">
+        <h3>Integration & Connection</h3>
+        <p>
+          Social connection, purpose, and community matter. We support the lifestyle factors that make life worth living.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>The CLARITY™ Framework</h2>
+    <div class="section-content">
+      <div class="content-block">
+        <h3>Your Comprehensive Wellness System</h3>
+        <p>
+          Lifestyle management is foundational to our CLARITY membership program. CLARITY integrates hormone optimization, nutrition, stress, sleep, movement, and longevity protocols into one cohesive system. Instead of managing separate services, you get a unified wellness ecosystem designed for transformation.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>What CLARITY Includes</h3>
+        <ul>
+          <li>Comprehensive health assessment and lab work</li>
+          <li>Personalized nutrition protocol and meal planning support</li>
+          <li>Sleep optimization and circadian rhythm management</li>
+          <li>Stress resilience training and nervous system regulation</li>
+          <li>Hormone optimization (men & women)</li>
+          <li>Movement and strength training guidance</li>
+          <li>Supplements and micronutrient optimization</li>
+          <li>Regular check-ins and protocol adjustments</li>
+          <li>Access to our community and resources</li>
+        </ul>
+      </div>
+
+      <div class="content-block">
+        <h3>CLARITY Membership Tiers</h3>
+        <p>
+          We offer multiple levels of support depending on your needs and goals. From Core self-guided protocols to premium white-glove programs with regular coaching. All include the foundational framework.
+        </p>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <strong>How Lifestyle Management Amplifies Everything:</strong> When you optimize sleep, nutrition, and stress, your hormones balance naturally. When hormones are optimized, your body responds better to exercise and aesthetics. When you're sleeping well and managing stress, your immune system strengthens and inflammation drops. Everything works together. That's the power of comprehensive lifestyle management.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Why Choose Our Lifestyle Program?</h2>
+    <div class="section-content">
+      <div class="content-block">
+        <h3>Clinical Expertise</h3>
+        <p>
+          Our team includes nutrition specialists, sleep experts, and wellness clinicians trained in evidence-based protocols. This isn't wellness advice—it's clinical guidance backed by research.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Data-Driven Results</h3>
+        <p>
+          We measure. We track. We adjust. Every protocol is informed by your unique labs, biomarkers, and progress. That's how we deliver results.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Long-Term Transformation</h3>
+        <p>
+          Quick fixes fade. Real wellness comes from lifestyle integration. We support sustainable change that becomes who you are, not what you do.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Integration with Medical Care</h3>
+        <p>
+          Our protocols complement traditional medicine. We work with your doctors to ensure everything is aligned and safe.
+        </p>
+      </div>
+    </div>
+
+    <div class="pricing">
+      <h3>Lifestyle Management Investment</h3>
+      <div class="price-item">
+        <span>Initial Wellness Assessment (Lab + Consultation)</span>
+        <strong>$300</strong>
+      </div>
+      <div class="price-item">
+        <span>Monthly Lifestyle Coaching (1-2 sessions/month)</span>
+        <strong>$300–$600</strong>
+      </div>
+      <div class="price-item">
+        <span>CLARITY Core Membership</span>
+        <strong>$399/month</strong>
+      </div>
+      <div class="price-item">
+        <span>CLARITY Elite Membership (Premium coaching)</span>
+        <strong>$599/month</strong>
+      </div>
+      <div class="price-item">
+        <span>CLARITY Transformation (All services + peptides)</span>
+        <strong>$799/month</strong>
+      </div>
+      <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(255, 255, 255, 0.7);">
+        Lifestyle management is an investment in your most valuable asset: your health. Most clients find the results—increased energy, mental clarity, longevity markers—more than justify the investment.
+      </p>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2 style="margin-bottom: 2rem;">Transform Your Life Through Wellness</h2>
+    <a href="/book.html" class="cta-button">Begin Your Lifestyle Transformation</a>
+    <p class="cta-text">Let's design your personalized wellness protocol. Book your assessment in Santee, San Diego.</p>
+  </section>
+
+  <footer>
+    <div class="brand">THE WELLNESS CO.</div>
+    <p>Clinical Wellness & Med Spa</p>
+    <p>Santee, San Diego</p>
+    <p>
+      <a href="tel:6194443264">(619) 444-3264</a> • <a href="mailto:info@urwellness.co">info@urwellness.co</a>
+    </p>
+    <p class="location">9658 Mission Gorge Rd, Santee, CA 92071</p>
+    <div class="copyright">
+      &copy; 2026 The Wellness Co Inc. All rights reserved. • <a href="https://draia.ai" target="_blank" rel="noopener">Site by DRAIA</a>
+    </div>
+  </footer>
+</body>
+</html>

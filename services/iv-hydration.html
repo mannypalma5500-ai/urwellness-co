@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IV hydration therapy in San Diego. Rapid rehydration for dehydration, hangovers, and travel fatigue at The Wellness Co med spa.">
+  <title>IV Hydration Therapy San Diego | Rapid Rehydration — The Wellness Co</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --obsidian: #1A1A1A;
+      --gold: #C9A96E;
+      --gold-hover: #B8963F;
+      --taupe: #7A6B5A;
+      --marble: #B8B0A8;
+      --linen: #F5F2EE;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--obsidian);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      padding: 1rem 2rem;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-phone {
+      color: var(--gold) !important;
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--gold), #D4AF7A);
+      color: var(--obsidian) !important;
+      padding: 0.6rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .nav-cta:hover {
+      box-shadow: 0 6px 25px rgba(201, 169, 110, 0.5);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 1rem;
+      }
+      .nav-links {
+        gap: 1rem;
+        font-size: 0.85rem;
+      }
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+      .nav-cta {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    .hero {
+      margin-top: 80px;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, var(--linen) 0%, var(--white) 100%);
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: var(--obsidian);
+      margin-bottom: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-description {
+      font-size: 1.2rem;
+      color: var(--taupe);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--obsidian);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .section-content {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .content-block {
+      background: var(--linen);
+      padding: 2rem;
+      border-radius: 4px;
+      border-left: 4px solid var(--gold);
+    }
+
+    .content-block h3 {
+      color: var(--obsidian);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .content-block p {
+      color: var(--taupe);
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .service-card {
+      background: var(--linen);
+      padding: 2rem;
+      border-radius: 4px;
+      border-top: 4px solid var(--gold);
+    }
+
+    .service-card h3 {
+      color: var(--obsidian);
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
+    }
+
+    .service-card p {
+      color: var(--taupe);
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .pricing {
+      background: var(--obsidian);
+      color: var(--white);
+      padding: 3rem 2rem;
+      margin: 3rem 0;
+      border-radius: 4px;
+    }
+
+    .pricing h3 {
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .price-item:last-child {
+      border-bottom: none;
+    }
+
+    .price-item strong {
+      color: var(--gold);
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, var(--linen) 0%, var(--white) 100%);
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, var(--gold), #D4AF7A);
+      color: var(--obsidian);
+      padding: 1rem 3rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+    }
+
+    .cta-button:hover {
+      box-shadow: 0 8px 30px rgba(201, 169, 110, 0.5);
+      transform: translateY(-3px);
+    }
+
+    .cta-text {
+      color: var(--taupe);
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: var(--obsidian);
+      color: rgba(255, 255, 255, 0.6);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    footer .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0.5rem;
+    }
+
+    footer p {
+      font-size: 0.85rem;
+      margin: 0.5rem 0;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #D4AF7A;
+    }
+
+    .location {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .copyright {
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.3);
+      margin-top: 1rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      color: var(--taupe);
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      .section h2 {
+        font-size: 2rem;
+      }
+      .hero-description {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">THE WELLNESS CO.</a>
+      <div class="nav-links">
+        <a href="/#services">Services</a>
+        <a href="/#clarity">CLARITY™</a>
+        <a href="/#softwave">SoftWave</a>
+        <a href="/#club">Club</a>
+        <a href="/#about">About</a>
+        <a href="tel:6194443264" class="nav-phone">(619) 444-3264</a>
+        <a href="/book.html" class="nav-cta">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hydration Drip</h1>
+      <p class="hero-description">
+        Rapid rehydration for dehydration, hangovers, travel fatigue, or athletic recovery. Restore fluid balance and electrolytes fast.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>What to Expect</h2>
+    <div class="section-content">
+      <div class="content-block">
+        <h3>IV Administration</h3>
+        <p>
+          Our registered nurses administer your hydration drip in a comfortable, private chair. The IV is placed with precision, and you'll relax for approximately 45 minutes while the therapeutic fluids rehydrate you at a cellular level.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Immediate Rehydration</h3>
+        <p>
+          Normal saline IV therapy delivers fluids directly into your bloodstream, bypassing the digestive system for immediate absorption and rapid rehydration. Feel the difference within minutes.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Electrolyte Restoration</h3>
+        <p>
+          Your hydration drip includes essential electrolytes—sodium, potassium, magnesium, and calcium—to restore cellular balance and support optimal hydration status.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Recovery & Renewal</h3>
+        <p>
+          Whether you're recovering from a night out, travel dehydration, or intense athletic performance, this drip restores your body's fluid balance and energy levels quickly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Hydration Drip Benefits</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Hangover Relief</h3>
+        <p>
+          Rapid rehydration counteracts dehydration-caused headaches and fatigue.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Travel Recovery</h3>
+        <p>
+          Combat jet lag and travel-induced dehydration instantly.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Athletic Recovery</h3>
+        <p>
+          Replenish fluids and electrolytes lost during intense workouts.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Energy Boost</h3>
+        <p>
+          Proper hydration supports energy levels and mental clarity.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Skin Health</h3>
+        <p>
+          Cellular hydration supports glowing, healthy-looking skin.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Immune Support</h3>
+        <p>
+          Optimal hydration strengthens immune function and recovery.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Why Choose Our Hydration Drip?</h2>
+    <div class="section-content">
+      <div class="content-block">
+        <h3>Clinical-Grade Administration</h3>
+        <p>
+          Our registered nurses are trained in IV therapy. Your comfort and safety are our priority, with sterile protocols and expert technique every step of the way.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Pure Normal Saline Formula</h3>
+        <p>
+          We use pharmaceutical-grade normal saline with balanced electrolytes, ensuring safe and effective rehydration without additives or complications.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Fast & Convenient</h3>
+        <p>
+          A 45-minute session delivers rapid results. Many clients feel the benefit within hours, with peak results within 24 hours.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Wellness Club Savings</h3>
+        <p>
+          Wellness Co Club members save 10% on all IV services. Book regular hydration sessions and maintain peak hydration status.
+        </p>
+      </div>
+    </div>
+
+    <div class="pricing">
+      <h3>Hydration Drip Pricing</h3>
+      <div class="price-item">
+        <span>Hydration Drip (45 minutes)</span>
+        <strong>From $299</strong>
+      </div>
+      <div class="price-item">
+        <span>Normal Saline & Electrolytes</span>
+        <strong>Included</strong>
+      </div>
+      <div class="price-item">
+        <span>Add Vitamin C Boost</span>
+        <strong>+$50</strong>
+      </div>
+      <div class="price-item">
+        <span>Wellness Co Club Member</span>
+        <strong>Save 10%</strong>
+      </div>
+      <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(255, 255, 255, 0.7);">
+        Our most popular IV therapy for quick recovery. Perfect for athletes, travelers, and anyone needing rapid rehydration.
+      </p>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2 style="margin-bottom: 2rem;">Rehydrate & Recover</h2>
+    <a href="/book.html" class="cta-button">Book Your IV Session</a>
+    <p class="cta-text">Fast hydration recovery in Santee. 45-minute sessions available.</p>
+  </section>
+
+  <footer>
+    <div class="brand">THE WELLNESS CO.</div>
+    <p>Clinical Wellness & Med Spa</p>
+    <p>Santee, San Diego</p>
+    <p>
+      <a href="tel:6194443264">(619) 444-3264</a> • <a href="mailto:info@urwellness.co">info@urwellness.co</a>
+    </p>
+    <p class="location">9658 Mission Gorge Rd, Santee, CA 92071</p>
+    <div class="copyright">
+      &copy; 2026 The Wellness Co Inc. All rights reserved. • <a href="https://draia.ai" target="_blank" rel="noopener">Site by DRAIA</a>
+    </div>
+  </footer>
+</body>
+</html>

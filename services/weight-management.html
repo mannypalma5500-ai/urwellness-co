@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Medical weight loss in San Diego. Medically supervised HCG diet programs and metabolic optimization at The Wellness Co.">
+  <title>Medical Weight Loss San Diego | HCG Diet Program — The Wellness Co</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --obsidian: #1A1A1A;
+      --gold: #C9A96E;
+      --gold-hover: #B8963F;
+      --taupe: #7A6B5A;
+      --marble: #B8B0A8;
+      --linen: #F5F2EE;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--obsidian);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      padding: 1rem 2rem;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-phone {
+      color: var(--gold) !important;
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--gold), #D4AF7A);
+      color: var(--obsidian) !important;
+      padding: 0.6rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .nav-cta:hover {
+      box-shadow: 0 6px 25px rgba(201, 169, 110, 0.5);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 1rem;
+      }
+      .nav-links {
+        gap: 1rem;
+        font-size: 0.85rem;
+      }
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+      .nav-cta {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    .hero {
+      margin-top: 80px;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, var(--linen) 0%, var(--white) 100%);
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: var(--obsidian);
+      margin-bottom: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-description {
+      font-size: 1.2rem;
+      color: var(--taupe);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--obsidian);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .section-content {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .content-block {
+      background: var(--linen);
+      padding: 2rem;
+      border-radius: 4px;
+      border-left: 4px solid var(--gold);
+    }
+
+    .content-block h3 {
+      color: var(--obsidian);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .content-block p {
+      color: var(--taupe);
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+
+    .highlight {
+      background: rgba(201, 169, 110, 0.1);
+      padding: 1.5rem;
+      border-radius: 4px;
+      border-left: 4px solid var(--gold);
+      margin: 2rem 0;
+      color: var(--taupe);
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .benefit-item {
+      background: var(--linen);
+      padding: 1.5rem;
+      border-radius: 4px;
+      border-top: 4px solid var(--gold);
+    }
+
+    .benefit-item h4 {
+      color: var(--obsidian);
+      margin-bottom: 0.5rem;
+    }
+
+    .benefit-item p {
+      color: var(--taupe);
+      font-size: 0.95rem;
+    }
+
+    .pricing {
+      background: var(--obsidian);
+      color: var(--white);
+      padding: 3rem 2rem;
+      margin: 3rem 0;
+      border-radius: 4px;
+    }
+
+    .pricing h3 {
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .price-item:last-child {
+      border-bottom: none;
+    }
+
+    .price-item strong {
+      color: var(--gold);
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, var(--linen) 0%, var(--white) 100%);
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, var(--gold), #D4AF7A);
+      color: var(--obsidian);
+      padding: 1rem 3rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+    }
+
+    .cta-button:hover {
+      box-shadow: 0 8px 30px rgba(201, 169, 110, 0.5);
+      transform: translateY(-3px);
+    }
+
+    .cta-text {
+      color: var(--taupe);
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: var(--obsidian);
+      color: rgba(255, 255, 255, 0.6);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    footer .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0.5rem;
+    }
+
+    footer p {
+      font-size: 0.85rem;
+      margin: 0.5rem 0;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #D4AF7A;
+    }
+
+    .location {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .copyright {
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.3);
+      margin-top: 1rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      color: var(--taupe);
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      .section h2 {
+        font-size: 2rem;
+      }
+      .hero-description {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">THE WELLNESS CO.</a>
+      <div class="nav-links">
+        <a href="/#services">Services</a>
+        <a href="/#clarity">CLARITY™</a>
+        <a href="/#softwave">SoftWave</a>
+        <a href="/#club">Club</a>
+        <a href="/#about">About</a>
+        <a href="tel:6194443264" class="nav-phone">(619) 444-3264</a>
+        <a href="/book.html" class="nav-cta">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Weight Management</h1>
+      <p class="hero-description">
+        Medically supervised weight loss programs. Personalized protocols to optimize your metabolism and achieve sustainable results.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>What to Expect</h2>
+    <div class="section-content">
+      <div class="content-block">
+        <h3>Medical Supervision, Not Restriction</h3>
+        <p>
+          Weight loss isn't about willpower—it's about hormones, metabolism, and the right support. Our clinicians supervise your entire program, monitor your progress, and adjust your protocol for optimal results without suffering.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Comprehensive Assessment</h3>
+        <p>
+          We start with detailed lab work to understand your metabolic profile, insulin sensitivity, hormonal imbalances, and nutritional deficiencies. This data guides your personalized protocol.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Appetite Management & Metabolism Support</h3>
+        <p>
+          Our programs address the root causes of weight gain—hormonal imbalance, metabolic dysfunction, and appetite dysregulation. We support your body in naturally feeling satisfied on less food while preserving muscle and energy.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Sustainable Results</h3>
+        <p>
+          Crash diets fail. We build sustainable habits—better nutrition, optimized metabolism, hormonal balance—that support lasting weight loss and long-term health.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Our Weight Loss Programs</h2>
+    <div class="section-content">
+      <div class="content-block">
+        <h3>Medically Supervised HCG Protocol</h3>
+        <p>
+          Human Chorionic Gonadotropin (HCG) is a hormone that supports metabolic function and appetite regulation during weight loss. Our HCG programs are medically supervised, with regular check-ins and progress monitoring to ensure safety and efficacy.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>How HCG Works</h3>
+        <p>
+          HCG works by supporting your body's ability to mobilize and burn fat while preserving lean muscle. Combined with a structured nutrition protocol, patients experience significant fat loss without the fatigue or muscle loss of conventional diets.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Program Options</h3>
+        <ul>
+          <li><strong>20-Day Program:</strong> Quick-start weight loss protocol for initial results and momentum</li>
+          <li><strong>40-Day Program:</strong> Extended program for significant fat loss and metabolic reset</li>
+          <li><strong>Maintenance & Stabilization:</strong> Post-program protocols to lock in results</li>
+        </ul>
+      </div>
+
+      <div class="content-block">
+        <h3>Complementary Approaches</h3>
+        <p>
+          We integrate HCG protocols with nutritional guidance, lifestyle optimization, stress management, and hormone balancing for comprehensive weight loss success. Your protocol is personalized to your needs.
+        </p>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <strong>Why Our Approach is Different:</strong> We don't just prescribe a diet. We address the hormonal, metabolic, and lifestyle factors that influence weight. This comprehensive approach produces results that last—because we're fixing the root causes, not just the symptoms.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Expected Results & Timeline</h2>
+    <div class="benefit-grid">
+      <div class="benefit-item">
+        <h4>Rapid Initial Loss</h4>
+        <p>
+          Most patients see significant fat loss within the first 1-2 weeks as metabolism resets and appetite normalizes.
+        </p>
+      </div>
+      <div class="benefit-item">
+        <h4>Sustained Momentum</h4>
+        <p>
+          Consistent weekly loss as your body learns to efficiently mobilize and burn fat without muscle loss.
+        </p>
+      </div>
+      <div class="benefit-item">
+        <h4>Metabolic Reset</h4>
+        <p>
+          Your metabolism stabilizes at a higher baseline, making weight maintenance easier than with traditional diets.
+        </p>
+      </div>
+      <div class="benefit-item">
+        <h4>Appetite Normalization</h4>
+        <p>
+          Hunger and cravings decrease as your hormones rebalance and your body achieves metabolic stability.
+        </p>
+      </div>
+      <div class="benefit-item">
+        <h4>Energy & Clarity</h4>
+        <p>
+          Unlike restrictive diets, you maintain energy and mental clarity throughout your program.
+        </p>
+      </div>
+      <div class="benefit-item">
+        <h4>Long-Term Success</h4>
+        <p>
+          By addressing root causes, results are sustainable. Patients maintain weight loss long after their program ends.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Integration with Comprehensive Wellness</h2>
+    <div class="section-content">
+      <div class="content-block">
+        <h3>Weight Loss is Just the Beginning</h3>
+        <p>
+          Weight management is most effective when integrated with hormone optimization, lifestyle management, nutrition, and stress management. That's why we recommend pairing weight loss programs with CLARITY membership for comprehensive metabolic and hormonal support.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Lifestyle Factors That Support Success</h3>
+        <ul>
+          <li>Sleep optimization (improves metabolism and hunger regulation)</li>
+          <li>Stress management (reduces cortisol and emotional eating)</li>
+          <li>Hormone balance (addresses thyroid, cortisol, insulin sensitivity)</li>
+          <li>Movement and strength training (preserves muscle, boosts metabolism)</li>
+          <li>Nutrition coaching (teaches sustainable habits)</li>
+        </ul>
+      </div>
+
+      <div class="content-block">
+        <h3>Why Comprehensive Matters</h3>
+        <p>
+          When you optimize sleep, hormone balance, and stress—your body naturally wants to lose weight. You're less hungry, your metabolism is more efficient, and weight loss becomes easier. That's comprehensive wellness.
+        </p>
+      </div>
+    </div>
+
+    <div class="pricing">
+      <h3>Weight Management Program Pricing</h3>
+      <div class="price-item">
+        <span>Initial Weight Loss Consultation & Labs</span>
+        <strong>$300</strong>
+      </div>
+      <div class="price-item">
+        <span>HCG 20-Day Program</span>
+        <strong>From $478</strong>
+      </div>
+      <div class="price-item">
+        <span>HCG 40-Day Program</span>
+        <strong>From $795</strong>
+      </div>
+      <div class="price-item">
+        <span>Maintenance & Stabilization Protocol</span>
+        <strong>$200–$400</strong>
+      </div>
+      <div class="price-item">
+        <span>Weekly Check-ins & Monitoring</span>
+        <strong>Included with program</strong>
+      </div>
+      <div class="price-item">
+        <span>CLARITY Membership (Enhanced results)</span>
+        <strong>$399–$799/month</strong>
+      </div>
+      <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(255, 255, 255, 0.7);">
+        Pricing includes medical supervision, lab work, protocol adjustments, and ongoing support throughout your program. We'll discuss the best option for your goals during your consultation.
+      </p>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2 style="margin-bottom: 2rem;">Transform Your Body & Metabolism</h2>
+    <a href="/book.html" class="cta-button">Schedule Your Weight Loss Consultation</a>
+    <p class="cta-text">Start your personalized weight management program in Santee, San Diego.</p>
+  </section>
+
+  <footer>
+    <div class="brand">THE WELLNESS CO.</div>
+    <p>Clinical Wellness & Med Spa</p>
+    <p>Santee, San Diego</p>
+    <p>
+      <a href="tel:6194443264">(619) 444-3264</a> • <a href="mailto:info@urwellness.co">info@urwellness.co</a>
+    </p>
+    <p class="location">9658 Mission Gorge Rd, Santee, CA 92071</p>
+    <div class="copyright">
+      &copy; 2026 The Wellness Co Inc. All rights reserved. • <a href="https://draia.ai" target="_blank" rel="noopener">Site by DRAIA</a>
+    </div>
+  </footer>
+</body>
+</html>
